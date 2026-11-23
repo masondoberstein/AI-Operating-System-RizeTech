@@ -112,13 +112,13 @@ Claude is installed. Don't start it yet: you'll type `claude` in Part 5, once yo
 
    ![Yes, I trust the authors](images/vscode-trust.png)
 
-5. Click **Terminal**, then **New Terminal**. Type `claude` and press Enter.
+5. Click **Terminal**, then **New Terminal**. Check the terminal line shows your copy's name (like `yourname-ai-os`). If it only shows `~`, click the **+** at the top right of the terminal for a fresh one. Then type `claude` and press Enter.
 6. The first time, Claude asks a few setup questions. Use the arrow keys and Enter to answer:
    - **Color theme:** pick any one.
    - **How to sign in:** pick **Claude account with subscription**.
 7. Your browser opens to Claude. Make sure it's signed in with your **work email** (if it shows a personal account, log out and back in), then click **Authorize**. If it shows a code instead, copy it and paste it into the terminal.
 8. Back in the terminal, press Enter through any notes. When it asks if you trust this folder, pick **Yes**.
-9. Type to Claude right there in the terminal. You're in.
+9. You'll see the **Claude Code** banner with your copy's name under it, and **accept edits on** at the bottom. Type to Claude right there in the terminal. You're in.
 
 **A blue "Restricted Mode" bar?** You skipped the trust step in step 4. Fix it so everything works:
 
