@@ -1,0 +1,22 @@
+# Secrets: never on GitHub
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Personal notes for one computer only
+CLAUDE.local.md
+.claude/settings.local.json
+
+# Computer clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.log
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
