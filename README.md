@@ -155,6 +155,8 @@ Each company's layer lives in its own private GitHub, so companies never see eac
 
 ### First-time setup
 
+**New to all of this?** Follow `guides/START-HERE.md` instead. It goes from zero (accounts and installs) all the way to using your AI OS on your phone.
+
 **What you need (once per computer):** VS Code, Git (on Windows: Git for Windows), the Claude Code extension in VS Code signed in to your Claude account, and a GitHub login.
 
 1. **Make your own copy.** At the top of this page, click **Use this template**, then **Create a new repository**. Set it to **Private**.
@@ -220,6 +222,7 @@ AI-Operating-System-RizeTech/
 ├── company-kit/                     ← Empty template for your company's shared layer (admins only)
 │
 ├── guides/
+│   ├── START-HERE.md                ← Setup from zero: accounts, installs, your copy, your phone
 │   ├── SETUP-GUIDE.md               ← Step by step through the Four Cs
 │   ├── 3ms-framework.md             ← The operator brain
 │   └── EXPANSIONS.md                ← What to add as you grow
@@ -235,7 +238,7 @@ AI-Operating-System-RizeTech/
                                        link, audit, session-handoff, agent-skills, save, 3d-brain
 ```
 
-**In plain English:** the folders are numbered in the same order you build your AI OS. **1-context** is everything it knows about you. **2-connections** is the tools and software it can reach. **3-capabilities** is the work it knows how to do. **4-cadence** is what runs on its own. You only need to open two files yourself: this page and `guides/SETUP-GUIDE.md`. Everything else fills itself in as you use it, and `.claude` is the engine you never need to touch.
+**In plain English:** the folders are numbered in the same order you build your AI OS. **1-context** is everything it knows about you. **2-connections** is the tools and software it can reach. **3-capabilities** is the work it knows how to do. **4-cadence** is what runs on its own. You only need to open three files yourself: this page, `guides/START-HERE.md`, and `guides/SETUP-GUIDE.md`. Everything else fills itself in as you use it, and `.claude` is the engine you never need to touch.
 
 ### What each part is
 
@@ -247,7 +250,7 @@ AI-Operating-System-RizeTech/
 | `3-capabilities/` | Your list of tasks to automate (with how far along each one is), step by step instructions for jobs you repeat, and small scripts that do one job each. Your skills live in `.claude/skills/`. |
 | `4-cadence/` | Your rhythm (what to do daily, weekly, monthly, quarterly), everything that runs on a schedule, and your `/audit` report cards. |
 | `company-kit/` | The empty starting point for a company's shared layer. Only whoever sets up AI for the company uses it, through `/setup-company`. |
-| `guides/` | The setup walkthrough, the Three Ms, and ideas for what to add as you grow. |
+| `guides/` | Start here (setup from zero, including your phone), the setup walkthrough, the Three Ms, and ideas for what to add as you grow. |
 | `archives/` | Old files. Nothing ever gets deleted, it moves here. |
 | `.env.example` | The names of any passwords or keys you'll need. The real ones go in a private `.env` file on your computer. |
 | `.claude/` | The engine: all the skills, the three helpers, the settings, the automatic rules, and the version history. |
