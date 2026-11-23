@@ -92,15 +92,28 @@ Go to **code.visualstudio.com** and click **Download**.
 ### Open it in VS Code
 
 1. In VS Code's left column, click the **branch** icon (Source Control), then **Clone Repository**.
-2. Paste the link, press Enter, and pick **Documents** as the place to save it.
+
+   ![Source Control, then Clone Repository](images/vscode-clone.png)
+
+2. Paste the link in the box at the top, press Enter, and pick **Documents** as the place to save it.
+
+   ![Paste the link and press Enter](images/vscode-paste-link.png)
+
 3. If asked to sign in to GitHub, click **Allow**, then **Authorize** in the browser.
 4. Click **Open**, then **Yes, I trust the authors**.
+
+   ![Yes, I trust the authors](images/vscode-trust.png)
+
 5. Click **Terminal**, then **New Terminal**. Type `claude` and press Enter.
 6. The first time, Claude asks if you trust this folder. Press Enter for **Yes**.
 7. Your browser opens to sign in. Make sure it's signed in with your **work email** (if it shows a personal account, log out and back in), then click **Authorize**. If it shows a code instead, copy it and paste it into the terminal.
 8. Type to Claude right there in the terminal. You're in.
 
-**A blue "Restricted Mode" bar?** Press **Ctrl+Shift+P** (Windows) or **Cmd+Shift+P** (Mac), type **Manage Workspace Trust**, press Enter, and click **Trust**. Then press Ctrl/Cmd+Shift+P again, type **Reload Window**, and press Enter.
+**A blue "Restricted Mode" bar?**
+
+![Restricted Mode bar](images/vscode-restricted.png)
+
+Press **Ctrl+Shift+P** (Windows) or **Cmd+Shift+P** (Mac), type **Manage Workspace Trust**, press Enter, and click **Trust**. Then press Ctrl/Cmd+Shift+P again, type **Reload Window**, and press Enter.
 
 **A "Chat" panel on the right?** That's VS Code's own AI, not Claude. Close it.
 
@@ -152,3 +165,7 @@ Approve these once and every new person just follows this guide:
 - **Claude:** which plan people use and who pays. On Team or Enterprise, turn on **Claude Code**, **Remote Control**, and **cloud sessions** in the admin settings.
 - **Laptops:** allow VS Code and Git, or push them to laptops yourself so employees can skip Parts 2 and 3. Claude Code runs in the terminal: allow downloads from `claude.ai` and the program at `%USERPROFILE%\.local\bin\claude.exe` (Windows) or `~/.local/bin/claude` (Mac). No admin rights needed.
 - **Connections:** which company systems (email, calendar, files, chat) people may connect, and who approves each.
+
+---
+
+VS Code screenshots are from the [VS Code documentation](https://github.com/microsoft/vscode-docs), © Microsoft, used under CC BY 3.0. Red marks added.
