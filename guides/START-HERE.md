@@ -24,22 +24,22 @@ This guide takes you from nothing to a working AI OS on your computer and your p
 **No account yet:**
 
 1. Go to **github.com/signup**.
-2. Type your email (your work email if this is for work), make a password, pick a username.
+2. Type your work email, make a password, pick a username.
 3. Check your email for the code GitHub sends and type it in.
-4. If this is for work, send your username to whoever runs GitHub at your company so they can add you.
+4. Send your username to whoever runs GitHub at your company so they can add you.
 
-**Already have a GitHub account:** go to **github.com** and sign in. If this is for work, add your work email (click your picture in the top right, then **Settings**, then **Emails**), and send your username to whoever runs GitHub at your company.
+**Already have a GitHub account:** sign in at **github.com** and send your username to whoever runs GitHub at your company so they can add you.
 
 ### Claude (the AI)
 
-**Your company gives you a Claude seat:** open the invite email from Claude and click **Accept**. Sign in with your work email. Skip the plan step, your company pays.
+**Got an invite email from Claude?** Click **Accept** and sign in with your work email. Your company pays, so there's no plan to pick.
 
-**No company seat:**
+**No invite:**
 
-1. Go to **claude.ai** and sign up.
-2. Pick a paid plan. **Pro** is enough to start.
+1. Go to **claude.ai** and sign up with your work email.
+2. Pick **Pro**. Ask your manager how your company wants it paid.
 
-**Already have a Claude account:** sign in at **claude.ai**. Free accounts need to upgrade to **Pro**. If you have a personal account and your company also gives you a seat, use the company one for work.
+**Already have a personal Claude account:** keep it for personal use. Use your work email for this one so work stays separate.
 
 ![Pick the Pro plan](images/claude-pricing.png)
 
@@ -99,7 +99,7 @@ This guide takes you from nothing to a working AI OS on your computer and your p
 ![Use this template, then Create a new repository](images/use-template.png)
 
 3. Fill in the page:
-   - **(1) Owner:** pick your company if this is for work, otherwise your own name.
+   - **(1) Owner:** pick your company, not your own name.
    - **(2) Repository name:** something like `yourname-ai-os`.
    - **(3) Visibility:** click it and pick **Private**. Never leave it on Public.
    - **(4)** Click **Create repository**.
