@@ -30,6 +30,7 @@ Read `guides/3ms-framework.md` once. It's how {{Your Name}} thinks about AI work
 - `/save`: optional wrap up. Records decisions and a work note. Syncing to GitHub already happens automatically.
 - `/next-step`: checks the folder against the Four Cs, tells the user which layer they're on, and starts the next step with them.
 - `/make-a-skill`: turns something the user does over and over into a skill. Best after doing the task once together.
+- `/add-doc`: drop any file (an SOP, meeting notes, a policy, a report) into `1-context/inbox/`, then this reads it, explains it, files it, and adds anything automatable to the task list.
 
 **When you're ready**
 - `/session-handoff`: when a chat gets long, writes a summary so a fresh chat picks up where you left off.
@@ -38,6 +39,11 @@ Read `guides/3ms-framework.md` once. It's how {{Your Name}} thinks about AI work
 - `/audit`: scores this setup on the Four Cs and saves a dated report in `4-cadence/audits/`.
 - `/agent-skills`: the build playbook (plan, build in small pieces, test, review). Use it for anything you build.
 - `/3d-brain` (optional, needs Node.js installed): builds a 3D map of what's in this folder.
+
+**Company layer (optional)**
+- `/connect-company`: connects this folder to the company's shared handbook and shared skills. The handbook is the company's version of the truth; if it disagrees with the user's notes, say so and ask.
+- `/share-skill`: sends one of the user's skills to the company so coworkers get it.
+- `/setup-company`: for whoever sets up AI for the whole company. Builds the company layer from `company-kit/`.
 
 ## Which model does what
 
@@ -69,10 +75,11 @@ The folders follow the Four Cs, in order.
 |---|---|
 | `CLAUDE.md` | This file. The brain Claude reads first. |
 | `README.md` | What this is and how to start. |
-| `1-context/` | **Context:** everything about you. `about-me.md` (personal), `my-job.md` (title, job description, a normal week, what you're measured on), `my-company.md` (the company, how it's organized, its words and systems), `my-team.md`, `priorities/` (one file per quarter), `processes/` (how each process works today), `voice.md`, `intake.md` (your /onboard answers), `decisions.md` (every decision, the date, and why, only ever added to), and `brainstorms/` (saved /grill-me interviews). |
+| `1-context/` | **Context:** everything about you. `about-me.md` (personal), `my-job.md` (title, job description, a normal week, what you're measured on), `my-company.md` (the company, how it's organized, its words and systems), `my-team.md`, `priorities/` (one file per quarter), `processes/` (how each process works today), `sops/` (SOPs in plain English, originals kept), `meetings/` (meeting summaries), `documents/` (org charts, policies, reports, each with a summary), `inbox/` (drop files here, then /add-doc), `voice.md`, `intake.md` (your /onboard answers), `decisions.md` (every decision, the date, and why, only ever added to), and `brainstorms/` (saved /grill-me interviews). |
 | `2-connections/` | **Connections:** `connections.md` (the tools and software this folder can reach, and whether each is connected) plus one short guide per connected tool (from `_tool-guide-template.md`). |
 | `3-capabilities/` | **Capabilities:** `tasks-to-automate.md` (every task to get off your plate and its stage), `workflows/` (step by step instructions for jobs that repeat, from `_template.md`) and `tools/` (scripts that each do one job). Skills live in `.claude/skills/`. |
 | `4-cadence/` | **Cadence:** `rhythm.md` (your daily, weekly, monthly, and quarterly habits), `schedules.md` (everything that runs on its own) and `audits/` (dated /audit reports). |
+| `company-kit/` | The empty company layer template, used only by `/setup-company`. Never put company data here. |
 | `guides/` | `SETUP-GUIDE.md` (the step by step walkthrough), `3ms-framework.md` (how to think about AI work), `EXPANSIONS.md` (what to add as you grow). |
 | `archives/` | Old files. Nothing gets deleted, it moves here. |
 | `.env` | Passwords and keys, on your own computer only. Never on GitHub. |
