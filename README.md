@@ -70,7 +70,7 @@ The kit teaches two complementary frameworks. **Three Ms first, Four Cs second.*
 - **Method** is how you decide what to build: find what's slowing you down most, first ask if you can just **stop doing it** (eliminate), then **automate** it, or **hand it to a person** (delegate) if it needs real judgment. Write the steps down, decide how much to let AI do on its own, and pick a number it should improve.
 - **Machine** is how you build it: small simple pieces that snap together, checked before you trust them, the simplest version first. A plain step by step process (a workflow) beats a fancy AI agent almost every time.
 
-Full breakdown in `references/3ms-framework.md`. The `/level-up` skill walks you through all three weekly.
+Full breakdown in `guides/3ms-framework.md`. The `/level-up` skill walks you through all three weekly.
 
 ### The Four Cs — architecture (what you build)
 
@@ -89,7 +89,7 @@ Full breakdown in `references/3ms-framework.md`. The `/level-up` skill walks you
 
 *The Three Ms of AI™ and The Four Cs of an AI OS™ are frameworks by Nate Herk, used with credit.*
 
-`SETUP-GUIDE.md` walks you through all four, step by step. Type `/next-step` any time to see where you are.
+`guides/SETUP-GUIDE.md` walks you through all four, step by step. Type `/next-step` any time to see where you are.
 
 ---
 
@@ -100,7 +100,7 @@ The kit includes setup, ongoing context interviews, a guided next step, skill bu
 | Skill | Type | When to run |
 |---|---|---|
 | `/onboard` | Setup wizard (one-time) | Day 1, immediately after clone. 7-question interview. Generates the Day-1 file set and fills `CLAUDE.md`. |
-| `/grill-me` | Saved context interview | Any time you want to unpack a plan or add more context. Asks one question at a time and saves every answer to `brainstorms/`. |
+| `/grill-me` | Saved context interview | Any time you want to unpack a plan or add more context. Asks one question at a time and saves every answer to `1-context/brainstorms/`. |
 | `/next-step` | Guide | Any time. Checks your folder against the Four Cs, tells you which layer you're on, and starts the next step with you. |
 | `/make-a-skill` | Skill builder | Any task you repeat. Do it once together, then turn it into a one word command. |
 | `/audit` | Evidence-based check | After setup, after a meaningful fix, and weekly while building. Checks routing and freshness, scores verified reliability, and automatically saves a dated report. |
@@ -117,13 +117,13 @@ The kit includes setup, ongoing context interviews, a guided next step, skill bu
 
 **`/audit`** checks whether the AI OS can find its information and perform useful work reliably. The rubric awards points for evidence, not folder counts, API keys, or skills named "daily." Missing or unverified layers cap the total; installed skills cannot compensate for absent connections or execution history. The report includes five retrieval probes, stale-cache and source-authority checks, and up to three prioritized improvements. It separates confirmed defects, verification gaps, and optional improvements. The score measures verified operational reliability, not overall usefulness.
 
-**Automatic audit history:** Every `/audit` saves a unique dated Markdown report in `audits/` and compares it with relevant prior reports. Findings retain their IDs and are tracked as new, still open, resolved, reopened, not rechecked, or no longer applicable. Resolution requires fresh evidence. Score comparisons distinguish actual fixes from better evidence and changed coverage. Earlier reports are preserved; the inspected system is unchanged apart from the new local report. Reports save to your own private copy so they're on every computer you use. An explicit request not to save overrides this default.
+**Automatic audit history:** Every `/audit` saves a unique dated Markdown report in `4-cadence/audits/` and compares it with relevant prior reports. Findings retain their IDs and are tracked as new, still open, resolved, reopened, not rechecked, or no longer applicable. Resolution requires fresh evidence. Score comparisons distinguish actual fixes from better evidence and changed coverage. Earlier reports are preserved; the inspected system is unchanged apart from the new local report. Reports save to your own private copy so they're on every computer you use. An explicit request not to save overrides this default.
 
 **In plain English:** `/audit` is a report card. It tests whether your AI OS can actually find your information and do real work, gives you a score out of 100 across the Four Cs, and tells you the top three things to fix next. It only gives credit for things it can prove work, not for files that just exist. Every report is saved, so you can see your score go up over time.
 
 **`/link path/to/project "use for this purpose"`** makes a new source findable without copying its contents into the manual. It follows the project's existing `CLAUDE.md` conventions and asks only when the target or intended use is unclear. A hot cache is optional and is never created by these skills.
 
-**`/grill-me "help me explain how my job works"`** turns what is in your head into saved context. Each answer is checkpointed immediately in a dated Markdown file under `brainstorms/`, so you can pause and resume. When you ask to build or update AI OS context, confirmed facts are added to the appropriate context pages. Tentative ideas stay labeled. Use `/onboard` for initial setup, then `/grill-me` as your work and thinking evolve.
+**`/grill-me "help me explain how my job works"`** turns what is in your head into saved context. Each answer is checkpointed immediately in a dated Markdown file under `1-context/brainstorms/`, so you can pause and resume. When you ask to build or update AI OS context, confirmed facts are added to the appropriate context pages. Tentative ideas stay labeled. Use `/onboard` for initial setup, then `/grill-me` as your work and thinking evolve.
 
 **`/level-up`** carries the audit evidence into one improvement. A verified repair to an existing workflow counts; another new skill is not always needed. Run `/audit` again after the fix. Repeated-use and scheduled-run credit comes from real execution over time.
 
@@ -148,7 +148,7 @@ Requires Node.js 22 or newer. The renderer is prebuilt, so the app runs with `no
 1. **Make your own copy.** At the top of this page, click **Use this template**, then **Create a new repository**. Set it to **Private**.
 2. **Clone it.** In VS Code, press Ctrl+Shift+P (Windows) or Cmd+Shift+P (Mac), type **Git: Clone**, and paste your copy's link. Authorize VS Code with GitHub if it asks.
 3. **Run `/onboard`.** Answer the 7 questions honestly. Voice samples must be pasted, not described. Takes ~15 minutes. Day-1 file set drops at the end.
-4. **Use it for a week.** Bring real questions. Make real decisions. Ask your assistant to record meaningful decisions in `decisions/log.md`.
+4. **Use it for a week.** Bring real questions. Make real decisions. Ask your assistant to record meaningful decisions in `1-context/decisions.md`.
 5. **Day 7:** run `/audit`. Read the Four-Cs gap report. Pick one gap to close.
 6. **Day 14:** run `/level-up`. The Three Ms interview surfaces one automation worth building. Build it with `/make-a-skill`.
 7. **As you grow:** use `/grill-me` to capture new context, `/link` new sources, use `/level-up` for one improvement, and rerun `/audit` to verify it. Lost? `/next-step`.
@@ -157,47 +157,59 @@ Requires Node.js 22 or newer. The renderer is prebuilt, so the app runs with `no
 
 ## What's in this folder
 
-You only need to open two of these. The rest is your AI OS's memory, which fills itself in as you use it, and the machinery that runs it.
+```
+AI-Operating-System-RizeTech/
+├── CLAUDE.md                        ← The brain. Claude reads this first, every time
+├── README.md                        ← This page
+├── LICENSE
+│
+├── 1-context/                       ← CONTEXT: everything about you
+│   ├── intake.md                    ← Your /onboard answers. Edit + re-run any time
+│   ├── decisions.md                 ← Append-only record of what was decided and why
+│   └── brainstorms/                 ← Created by /grill-me; saved interviews
+│
+├── 2-connections/                   ← CONNECTIONS: the tools it can reach
+│   └── connections.md               ← Every tool you use and whether it's connected
+│
+├── 3-capabilities/                  ← CAPABILITIES: the work it can do
+│   ├── workflows/                   ← Step by step instructions for jobs that repeat
+│   └── tools/                       ← Scripts that each do one job
+│
+├── 4-cadence/                       ← CADENCE: what runs on its own
+│   ├── schedules.md                 ← Everything scheduled, and when
+│   └── audits/                      ← Created on first /audit; dated report cards
+│
+├── guides/
+│   ├── SETUP-GUIDE.md               ← Step by step through the Four Cs
+│   ├── 3ms-framework.md             ← The operator brain
+│   └── EXPANSIONS.md                ← What to add as you grow
+│
+├── archives/                        ← Old stuff. Don't delete. Move here.
+├── .env.example                     ← Names of the keys you need (values stay in .env)
+└── .claude/                         ← The engine
+    ├── settings.json                ← Sonnet with an Opus advisor, the 3 automatic rules
+    ├── hooks/                       ← auto-pull, auto-save, block-keys
+    ├── agents/                      ← planner, builder, checker
+    ├── CHANGELOG.md / VERSION       ← Which version you have and what changed
+    └── skills/                      ← onboard, grill-me, next-step, make-a-skill, level-up,
+                                       link, audit, session-handoff, agent-skills, save, 3d-brain
+```
 
-### 1. Start here (read these)
+**In plain English:** the folders are numbered in the same order you build your AI OS. **1-context** is everything it knows about you. **2-connections** is the tools it can reach. **3-capabilities** is the work it knows how to do. **4-cadence** is what runs on its own. You only need to open two files yourself: this page and `guides/SETUP-GUIDE.md`. Everything else fills itself in as you use it, and `.claude` is the engine you never need to touch.
 
-| File | What it is |
-|---|---|
-| `README.md` | This page. What it is and how to start. |
-| `SETUP-GUIDE.md` | Your step by step walkthrough, from setup to a working AI OS. |
+### What each part is
 
-### 2. Your AI OS's memory (fills in as you use it)
-
-You don't need to edit these by hand. `/onboard`, `/grill-me`, and everyday use fill them in for you.
-
-| File or folder | What it holds |
+| Folder or file | What it is |
 |---|---|
 | `CLAUDE.md` | The brain. The first thing Claude reads every time: who you are, how you work, what it can do. |
-| `aios-intake.md` | Your answers to the seven `/onboard` questions. |
-| `context/` | Everything about you: your role, your team, your company, your priorities. |
-| `connections.md` | The list of tools your AI OS can reach. |
-| `decisions/` | A running log of what you decided and why. |
-| `brainstorms/` | Every `/grill-me` interview, saved. |
-| `workflows/` | Step by step instructions for jobs you repeat. |
-| `tools/` | Small scripts that do one job each. |
-| `references/` | Guides it reads, like the Three Ms and how each of your tools works. |
-| `audits/` | Your `/audit` report cards, so you can see your score go up. |
+| `1-context/` | Everything about you: your `/onboard` answers, your role, team, company, priorities, how you write, every decision, and every `/grill-me` interview. |
+| `2-connections/` | The list of tools your AI OS can reach, plus a short guide for each one it's connected to. |
+| `3-capabilities/` | Step by step instructions for jobs you repeat, and small scripts that do one job each. Your skills live in `.claude/skills/`. |
+| `4-cadence/` | Everything that runs on a schedule, and your `/audit` report cards so you can see your score go up. |
+| `guides/` | The setup walkthrough, the Three Ms, and ideas for what to add as you grow. |
 | `archives/` | Old files. Nothing ever gets deleted, it moves here. |
-
-### 3. Behind the scenes (you never need to open these)
-
-| File or folder | What it does |
-|---|---|
-| `.claude/` | The engine: all the skills, the three helpers, the settings, and the automatic rules. |
 | `.env.example` | The names of any passwords or keys you'll need. The real ones go in a private `.env` file on your computer. |
-| `.gitignore` | The list of files that should never go to GitHub, like your passwords. |
-| `EXPANSIONS.md` | Ideas for new folders to add once you've been using it a while. |
-| `CHANGELOG.md` and `VERSION` | Which version you have and what changed. |
-| `LICENSE` | The free to use license and credits. |
-
-See `EXPANSIONS.md` for what to add as you grow (projects/, templates/, scripts/, sub-OS folders, etc.).
-
----
+| `.claude/` | The engine: all the skills, the three helpers, the settings, the automatic rules, and the version history. |
 
 ## Words you'll see
 
