@@ -13,23 +13,33 @@ This guide takes you from nothing to a working AI OS on your computer and your p
 | 7 | Connect to your company's layer (only if your company has one) | 5 min |
 | 8 | Build it out | ongoing |
 
-**Using this for work?** Before you start, ask your manager or IT three things: which GitHub to make your copy in (your company's, not your personal one), which Claude account to use, and whether you're allowed to install apps on your laptop. Section "For IT and admins" at the bottom lists everything they approve once for everyone.
-
 ---
 
 ## Part 1: Make your accounts
 
 ### GitHub (where your AI OS is stored)
 
+**Got an invite email from your company's GitHub?** Click **Join** in that email and follow it. If you don't have a GitHub account yet, it walks you through making one. Then skip to Claude below.
+
+**No account yet:**
+
 1. Go to **github.com/signup**.
 2. Type your email (your work email if this is for work), make a password, pick a username.
 3. Check your email for the code GitHub sends and type it in.
-4. If your company uses GitHub, tell IT your username so they can add you.
+4. If this is for work, send your username to whoever runs GitHub at your company so they can add you.
+
+**Already have a GitHub account:** go to **github.com** and sign in. If this is for work, add your work email (click your picture in the top right, then **Settings**, then **Emails**), and send your username to whoever runs GitHub at your company.
 
 ### Claude (the AI)
 
-1. Go to **claude.ai** and sign up with the same email.
-2. Pick a paid plan. **Pro** is enough to start. If your company gives you a Claude seat, skip this and use the invite email they send you instead.
+**Your company gives you a Claude seat:** open the invite email from Claude and click **Accept**. Sign in with your work email. Skip the plan step, your company pays.
+
+**No company seat:**
+
+1. Go to **claude.ai** and sign up.
+2. Pick a paid plan. **Pro** is enough to start.
+
+**Already have a Claude account:** sign in at **claude.ai**. Free accounts need to upgrade to **Pro**. If you have a personal account and your company also gives you a seat, use the company one for work.
 
 ![Pick the Pro plan](images/claude-pricing.png)
 
