@@ -131,16 +131,6 @@ The kit includes setup, ongoing context interviews, a guided next step, skill bu
 
 ## Quick start
 
-### See your AI OS in 3D
-
-Turn your growing collection of notes, projects, and assistant memories into one place you can explore. See which ideas connect, search for something you remember, open the original note, and spot knowledge that needs attention. The growth replay also gives you a visual way to show someone what your AI OS contains.
-
-Run `/3d-brain` in Claude Code. It asks what to call your brain and which categories to show, with suggested source folders. Then it creates `apps/3d-brain/` using the included application template. Your name, categories, colors, and paths live in a local config.
-
-Use **Play demo** to watch the brain grow from a single idea into connected branches. You can drag to orbit and scroll to zoom throughout playback. **Cinema** provides a clean presentation view. The replay follows actual note connections; it is not a historical timeline.
-
-Requires Node.js 22 or newer. The renderer is prebuilt, so the app runs with `node serve.mjs` without installing dependencies. It reads local Markdown/text. Claude memory, meeting notes, and video knowledge can use selected Markdown folders. Other formats or online services require an export or a tested adapter. The app stays on localhost; personal config and generated data are gitignored.
-
 ### First-time setup
 
 **What you need (once per computer):** VS Code, Git (on Windows: Git for Windows), the Claude Code extension in VS Code signed in to your Claude account, and a GitHub login.
@@ -153,6 +143,16 @@ Requires Node.js 22 or newer. The renderer is prebuilt, so the app runs with `no
 6. **Day 14:** run `/level-up`. The Three Ms interview surfaces one automation worth building. Build it with `/make-a-skill`.
 7. **As you grow:** use `/grill-me` to capture new context, `/link` new sources, use `/level-up` for one improvement, and rerun `/audit` to verify it. Lost? `/next-step`.
 
+### See your AI OS in 3D
+
+Turn your growing collection of notes, projects, and assistant memories into one place you can explore. See which ideas connect, search for something you remember, open the original note, and spot knowledge that needs attention. The growth replay also gives you a visual way to show someone what your AI OS contains.
+
+Run `/3d-brain` in Claude Code. It asks what to call your brain and which categories to show, with suggested source folders. Then it creates `apps/3d-brain/` using the included application template. Your name, categories, colors, and paths live in a local config.
+
+Use **Play demo** to watch the brain grow from a single idea into connected branches. You can drag to orbit and scroll to zoom throughout playback. **Cinema** provides a clean presentation view. The replay follows actual note connections; it is not a historical timeline.
+
+Requires Node.js 22 or newer. The renderer is prebuilt, so the app runs with `node serve.mjs` without installing dependencies. It reads local Markdown/text. Claude memory, meeting notes, and video knowledge can use selected Markdown folders. Other formats or online services require an export or a tested adapter. The app stays on localhost; personal config and generated data are gitignored.
+
 ---
 
 ## What's in this folder
@@ -164,18 +164,28 @@ AI-Operating-System-RizeTech/
 ├── LICENSE
 │
 ├── 1-context/                       ← CONTEXT: everything about you
+│   ├── about-me.md                  ← Who you are and how you like to work
+│   ├── my-job.md                    ← Title, job description, a normal week, what you're measured on
+│   ├── my-company.md                ← What the company does, how it's organized, its words and systems
+│   ├── my-team.md                   ← Who does what and when you go to them
+│   ├── priorities/                  ← One file per quarter: 2026-q4, 2027-q1, q2, q3, q4
+│   ├── processes/                   ← How each process works today (template included)
+│   ├── voice.md                     ← How you write, so drafts sound like you
 │   ├── intake.md                    ← Your /onboard answers. Edit + re-run any time
 │   ├── decisions.md                 ← Append-only record of what was decided and why
-│   └── brainstorms/                 ← Created by /grill-me; saved interviews
+│   └── brainstorms/                 ← Saved /grill-me interviews
 │
 ├── 2-connections/                   ← CONNECTIONS: the tools and software it can reach
-│   └── connections.md               ← Every tool and piece of software, and whether it's connected
+│   ├── connections.md               ← Every tool and piece of software, and whether it's connected
+│   └── _tool-guide-template.md      ← One guide per connected tool, so it never re-learns it
 │
 ├── 3-capabilities/                  ← CAPABILITIES: the work it can do
-│   ├── workflows/                   ← Step by step instructions for jobs that repeat
+│   ├── tasks-to-automate.md         ← Every task you want off your plate, and how far along it is
+│   ├── workflows/                   ← Step by step instructions for jobs that repeat (template included)
 │   └── tools/                       ← Scripts that each do one job
 │
 ├── 4-cadence/                       ← CADENCE: what runs on its own
+│   ├── rhythm.md                    ← Your daily, weekly, monthly, and quarterly habits
 │   ├── schedules.md                 ← Everything scheduled, and when
 │   └── audits/                      ← Created on first /audit; dated report cards
 │
@@ -202,10 +212,10 @@ AI-Operating-System-RizeTech/
 | Folder or file | What it is |
 |---|---|
 | `CLAUDE.md` | The brain. The first thing Claude reads every time: who you are, how you work, what it can do. |
-| `1-context/` | Everything about you: your `/onboard` answers, your role, team, company, priorities, how you write, every decision, and every `/grill-me` interview. |
-| `2-connections/` | The tools and software your AI OS can reach, plus a short guide for each one it's connected to. |
-| `3-capabilities/` | Step by step instructions for jobs you repeat, and small scripts that do one job each. Your skills live in `.claude/skills/`. |
-| `4-cadence/` | Everything that runs on a schedule, and your `/audit` report cards so you can see your score go up. |
+| `1-context/` | Everything about you, already organized: you, your job, your company, your team, your priorities by quarter, how your processes work, how you write, every decision, and every `/grill-me` interview. Each file comes with headings so you can see what goes where. |
+| `2-connections/` | The tools and software your AI OS can reach, plus a short guide for each one it's connected to (a template shows what goes in one). |
+| `3-capabilities/` | Your list of tasks to automate (with how far along each one is), step by step instructions for jobs you repeat, and small scripts that do one job each. Your skills live in `.claude/skills/`. |
+| `4-cadence/` | Your rhythm (what to do daily, weekly, monthly, quarterly), everything that runs on a schedule, and your `/audit` report cards. |
 | `guides/` | The setup walkthrough, the Three Ms, and ideas for what to add as you grow. |
 | `archives/` | Old files. Nothing ever gets deleted, it moves here. |
 | `.env.example` | The names of any passwords or keys you'll need. The real ones go in a private `.env` file on your computer. |
