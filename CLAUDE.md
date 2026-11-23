@@ -70,7 +70,7 @@ The folders follow the Four Cs, in order.
 | `CLAUDE.md` | This file. The brain Claude reads first. |
 | `README.md` | What this is and how to start. |
 | `1-context/` | **Context:** everything about you. `intake.md` (your /onboard answers), `about-me.md`, `about-my-role.md`, `priorities.md`, `voice.md`, `decisions.md` (every decision, the date, and why, never edited, only added to), and `brainstorms/` (saved /grill-me interviews). |
-| `2-connections/` | **Connections:** `connections.md` (every tool this folder can reach and whether it's connected) plus one short guide per connected tool. |
+| `2-connections/` | **Connections:** `connections.md` (the tools and software this folder can reach, and whether each is connected) plus one short guide per connected tool. |
 | `3-capabilities/` | **Capabilities:** `workflows/` (step by step instructions for jobs that repeat) and `tools/` (scripts that each do one job). Skills live in `.claude/skills/`. |
 | `4-cadence/` | **Cadence:** `schedules.md` (everything that runs on its own) and `audits/` (dated /audit reports). |
 | `guides/` | `SETUP-GUIDE.md` (the step by step walkthrough), `3ms-framework.md` (how to think about AI work), `EXPANSIONS.md` (what to add as you grow). |
