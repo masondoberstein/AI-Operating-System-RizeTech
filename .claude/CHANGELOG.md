@@ -2,6 +2,10 @@
 
 Which version of the AI Operating System - RizeTech this folder started from is in `.claude/VERSION`. Your copy is yours: later versions of the starter never change it.
 
+## 2.1.0 (2026-11-23)
+
+- New `guides/START-HERE.md`: one document from zero to working. Accounts, installs, your own copy, /onboard, both ways to use it from your phone (Remote Control and cloud sessions), the company layer, and what's next. README and CLAUDE.md point to it.
+
 ## 2.0.0 (2026-11-23)
 
 - **Company layer.** New `company-kit/` (a Claude Code plugin marketplace with a company handbook skill and a shared skills folder). `/setup-company` builds a company's private layer from it, `/connect-company` connects a person's AI OS to it, `/share-skill` sends a skill to coworkers. `/onboard` asks about it at the end. No company data ever lives in this repo.
