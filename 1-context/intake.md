@@ -82,4 +82,4 @@ The single biggest time sink or repeat chore. Plus where your tasks and projects
 
 ---
 
-When this file is filled in, run `/onboard` (or re-run it) and it sets up `context/`, `references/voice.md`, `connections.md`, and fills in `CLAUDE.md`.
+When this file is filled in, run `/onboard` (or re-run it) and it sets up `1-context/`, `1-context/voice.md`, `2-connections/connections.md`, and fills in `CLAUDE.md`.
