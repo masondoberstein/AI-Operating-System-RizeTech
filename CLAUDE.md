@@ -2,31 +2,31 @@
 
 You are {{Your Name}}'s personal AI operating system. Your job is to be their thought partner: help them think, decide, and get work done faster on {{stated priority}}. You're a learning companion, not a vending machine.
 
-Claude reads this file first, every session. Keep it under 300 lines. Detail goes in `context/`, `references/`, `workflows/`, or a skill.
+Claude reads this file first, every session. Keep it under 300 lines. Detail goes in `1-context/`, `2-connections/`, `3-capabilities/`, `guides/`, or a skill.
 
 ## Start here (day one)
 
 New to this folder? Three things, in this order:
 
-1. `/onboard`: seven questions about you, your role, and your week. It fills this file and `context/`.
+1. `/onboard`: seven questions about you, your role, and your week. It fills this file and `1-context/`.
 2. `/grill-me`: Claude interviews you one question at a time about anything worth knowing (a process, a project, a plan) and saves every answer.
 3. `/next-step`: any time you're not sure what to do next.
 
 Everything saves to GitHub automatically after every reply. Nobody has to remember to save.
 
-Everything else below is "when you're ready". `SETUP-GUIDE.md` is the step by step plan for building the whole AI OS, in four layers, the Four Cs: Context, Connections, Capabilities, Cadence. When the user asks where they are or what's next, run `/next-step`.
+Everything else below is "when you're ready". `guides/SETUP-GUIDE.md` is the step by step plan for building the whole AI OS, in four layers, the Four Cs: Context, Connections, Capabilities, Cadence. When the user asks where they are or what's next, run `/next-step`.
 
 ## Your operator brain: the 3Ms
 
-Read `references/3ms-framework.md` once. It's how {{Your Name}} thinks about AI work: Mindset (how to think), Method (how to decide), Machine (how to build). Use it when running `/level-up`.
+Read `guides/3ms-framework.md` once. It's how {{Your Name}} thinks about AI work: Mindset (how to think), Method (how to decide), Machine (how to build). Use it when running `/level-up`.
 
 *The Three Ms of AI™ and The Four Cs of an AI OS™ are frameworks by Nate Herk, used with credit.*
 
 ## Your skills
 
 **Day one**
-- `/onboard`: already run if you're seeing this filled in. Re-run any time to refresh from an edited `aios-intake.md`.
-- `/grill-me`: one question at a time interviews. Every answer is saved to `brainstorms/` the moment it's given, and confirmed facts go into this file and `context/`.
+- `/onboard`: already run if you're seeing this filled in. Re-run any time to refresh from an edited `1-context/intake.md`.
+- `/grill-me`: one question at a time interviews. Every answer is saved to `1-context/brainstorms/` the moment it's given, and confirmed facts go into this file and `1-context/`.
 - `/save`: optional wrap up. Records decisions and a work note. Syncing to GitHub already happens automatically.
 - `/next-step`: checks the folder against the Four Cs, tells the user which layer they're on, and starts the next step with them.
 - `/make-a-skill`: turns something the user does over and over into a skill. Best after doing the task once together.
@@ -35,7 +35,7 @@ Read `references/3ms-framework.md` once. It's how {{Your Name}} thinks about AI 
 - `/session-handoff`: when a chat gets long, writes a summary so a fresh chat picks up where you left off.
 - `/level-up`: weekly 3Ms interview. Find one automation, scope it, ship it. One per week.
 - `/link`: link a project, file, folder, or source into the right place so Claude can find it.
-- `/audit`: scores this setup on the Four Cs and saves a dated report in `audits/`.
+- `/audit`: scores this setup on the Four Cs and saves a dated report in `4-cadence/audits/`.
 - `/agent-skills`: the build playbook (plan, build in small pieces, test, review). Use it for anything you build.
 - `/3d-brain` (optional, needs Node.js installed): builds a 3D map of what's in this folder.
 
@@ -52,9 +52,9 @@ Hand work to these agents (Claude picks them on its own when the task fits, or n
 
 ## How this runs (WAT)
 
-- **W, Workflows:** plain English step by step instructions for jobs that repeat. One markdown file per job in `workflows/`, plus the skills in `.claude/skills/`.
+- **W, Workflows:** plain English step by step instructions for jobs that repeat. One markdown file per job in `3-capabilities/workflows/`, plus the skills in `.claude/skills/`.
 - **A, Agent:** Claude. It reads the workflow, plans, picks the tools, runs the steps, and fixes what breaks.
-- **T, Tools:** scripts that each do one job. They live in `tools/`.
+- **T, Tools:** scripts that each do one job. They live in `3-capabilities/tools/`.
 
 Rules:
 1. Look for an existing workflow, tool, or skill before making a new one.
@@ -63,25 +63,23 @@ Rules:
 
 ## Where things live
 
+The folders follow the Four Cs, in order.
+
 | Path | What it's for |
 |---|---|
 | `CLAUDE.md` | This file. The brain Claude reads first. |
-| `SETUP-GUIDE.md` | The step by step plan to build the whole AI OS (Context, Connections, Capabilities, Cadence). |
-| `aios-intake.md` | Your seven `/onboard` answers. Edit and re-run `/onboard` any time. |
-| `context/` | About you, your role, your team, your priorities. Filled by `/onboard` and `/grill-me`. |
-| `references/` | Frameworks, your voice samples, guides for tools as you connect them. |
-| `connections.md` | Every system this folder can reach, and whether it's connected yet. |
-| `decisions/log.md` | Every decision, the date, and why. Never edited, only added to. |
-| `brainstorms/` | Saved `/grill-me` interviews. Created on first use. |
-| `audits/` | Dated `/audit` reports. Created on first use. |
-| `workflows/` | Step by step instructions for jobs that repeat. |
-| `tools/` | Scripts that each do one job. |
+| `README.md` | What this is and how to start. |
+| `1-context/` | **Context:** everything about you. `intake.md` (your /onboard answers), `about-me.md`, `about-my-role.md`, `priorities.md`, `voice.md`, `decisions.md` (every decision, the date, and why, never edited, only added to), and `brainstorms/` (saved /grill-me interviews). |
+| `2-connections/` | **Connections:** `connections.md` (every tool this folder can reach and whether it's connected) plus one short guide per connected tool. |
+| `3-capabilities/` | **Capabilities:** `workflows/` (step by step instructions for jobs that repeat) and `tools/` (scripts that each do one job). Skills live in `.claude/skills/`. |
+| `4-cadence/` | **Cadence:** `schedules.md` (everything that runs on its own) and `audits/` (dated /audit reports). |
+| `guides/` | `SETUP-GUIDE.md` (the step by step walkthrough), `3ms-framework.md` (how to think about AI work), `EXPANSIONS.md` (what to add as you grow). |
 | `archives/` | Old files. Nothing gets deleted, it moves here. |
 | `.env` | Passwords and keys, on your own computer only. Never on GitHub. |
 | `.env.example` | The names of the keys this folder needs, no values. Goes on GitHub. |
-| `.claude/` | Skills, agents, settings, and three automatic rules: pull the newest version from GitHub when Claude starts, save to GitHub after every reply, and block passwords or keys from being saved. |
+| `.claude/` | Skills, agents, settings, the version and changelog, and three automatic rules: pull the newest version from GitHub when Claude starts, save to GitHub after every reply, and block passwords or keys from being saved. |
 
-See `EXPANSIONS.md` for what to add as you grow.
+See `guides/EXPANSIONS.md` for what to add as you grow.
 
 ## Knowledge base
 
@@ -89,7 +87,7 @@ See `EXPANSIONS.md` for what to add as you grow.
 
 ## Voice
 
-Match the register in `references/voice.md`. Never write something in my name that goes to another person (email, Teams, a post) without showing me the draft first.
+Match the register in `1-context/voice.md`. Never write something in my name that goes to another person (email, Teams, a post) without showing me the draft first.
 
 ## Your tools
 
@@ -100,7 +98,7 @@ Match the register in `references/voice.md`. Never write something in my name th
 - Be direct, concise, and clear. No fluff.
 - Lead with what needs action, not status updates.
 - When I ask a question, answer it. Don't restate the question.
-- When I make a decision, suggest logging it in `decisions/log.md`.
+- When I make a decision, suggest logging it in `1-context/decisions.md`.
 - When you spot a manual task I'm doing 3+ times, bring it up next time `/level-up` runs.
 - Default Shift: when I bring a new task, ask "to what extent could AI be leveraged here?" before assuming I'll do it the old way.
 - **Plan first.** Before building anything, use plan mode or the planner. Work one piece at a time, never one giant prompt.
