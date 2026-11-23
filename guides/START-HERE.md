@@ -68,6 +68,8 @@ Go to **code.visualstudio.com** and click **Download**.
    - **Windows:** quit VS Code completely (close every VS Code window), open it again, then click **Terminal**, then **New Terminal**.
 5. Type `claude --version` and press Enter. A version number means it worked.
 
+Claude is installed. Don't start it yet: you'll type `claude` in Part 5, once your AI OS folder is open, so Claude starts inside it.
+
 **"Not recognized" or "command not found":** do steps 3 and 4 again. On a Mac, if it still fails, quit VS Code with Cmd+Q and reopen it. **"Access denied", blocked, or a virus warning:** your company's security is blocking it. Send IT the exact message, and use the Claude panel instead (see "Terminal blocked?" at the end).
 
 ---
