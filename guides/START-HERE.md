@@ -95,7 +95,7 @@ Already have a personal Claude account? Keep it for personal use and follow one 
 2. On the far left there's a column of icons. Click the one that looks like **four small squares**. That's **Extensions**.
 3. In the search box at the top, type **Claude Code**.
 4. Click the one made by **Anthropic**, then click the blue **Install** button.
-5. When it finishes, a **Claude** icon (an orange spark) shows up in VS Code. Click it. A Claude panel opens.
+5. When it finishes, a **Claude** icon (a spark) shows up in the column of icons on the far left, right under the four squares. Click it. The Claude panel opens.
 6. Click **Sign in**, then pick **Claude.ai subscription**.
 7. Your web browser opens. Click **Authorize**. Go back to VS Code. You're signed in.
 
@@ -134,8 +134,12 @@ Already have a personal Claude account? Keep it for personal use and follow one 
 4. A box asks where to save it. Pick **Documents**, then click **Select as Repository Destination**.
 5. A box asks to sign in to GitHub. Click **Allow**, then **Authorize** in the browser, then go back to VS Code.
 6. When it says the clone is done, click **Open**.
-7. If VS Code asks "Do you trust the authors of the files in this folder?", click **Yes, I trust the authors**.
-8. Click the **Claude** icon to open Claude Code. Your AI OS is open.
+7. VS Code asks "Do you trust the authors of the files in this folder?" Click **Yes, I trust the authors**. This one matters: if you skip it, VS Code opens in **Restricted Mode** and turns Claude off.
+8. In the column of icons on the far left, click the **Claude** spark (right under the four squares). The Claude panel opens. Your AI OS is ready.
+
+   **Don't see the Claude spark?** Look for **Restricted Mode** in a blue bar at the top or in the bottom left corner. Click **Manage**, then **Trust**. The spark comes back.
+
+   **A "Chat" panel opened on the right?** That's VS Code's own AI (Copilot), not Claude. Close it with the **X**.
 
 ---
 
