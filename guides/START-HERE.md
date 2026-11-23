@@ -8,7 +8,7 @@ This guide takes you from nothing to a working AI OS on your computer and your p
 | 2 | Install VS Code | 5 min |
 | 3 | Install Git | 5 min |
 | 4 | Install Claude Code and sign in | 5 min |
-| 5 | Make your own copy and open it | 10 min |
+| 5 | Make your own copy and open it (plus the optional terminal) | 15 min |
 | 6 | Put it on your phone | 10 min |
 | 7 | Connect to your company's layer (only if your company has one) | 5 min |
 | 8 | Build it out | ongoing |
@@ -218,6 +218,8 @@ There are two ways to use it from your phone. Set up both.
 
 1. In VS Code, in the Claude panel, type `/` to open the command menu.
 2. Go to **Settings** and turn on **Enable Remote Control for all sessions**.
+
+   Using Claude in the terminal instead? Type `/config` and press Enter, find **Enable Remote Control for all sessions**, and turn it on.
 3. That's it. From now on, every chat you start on your computer also shows up on your phone.
 
 **Using it:** on your phone, open the Claude app, tap **Code**, and tap the chat with the **laptop** icon. Type like normal.
@@ -268,7 +270,8 @@ You can do all of this from your computer or your phone.
 | Opening VS Code on a Mac | "Are you sure you want to open it?" | **Open** |
 | Cloning your copy | "The extension GitHub wants to sign in" | **Allow**, then **Authorize** in the browser |
 | Opening your folder | "Do you trust the authors?" | **Yes, I trust the authors** |
-| Signing into Claude Code | Browser opens to Claude | **Authorize** |
+| Missed the trust pop up | Blue "Restricted Mode" bar, no Claude spark | **Manage Workspace Trust**, then **Trust**, then **Reload Window** (Part 5) |
+| Signing into Claude Code (panel or terminal) | Browser opens to Claude | **Authorize** |
 | Claude wants to run something new | "Do you want to proceed?" | **Yes, and don't ask again** (only for things in your own folder) |
 
 Your AI OS comes set up so Claude can edit files in your folder and save to GitHub without asking every time. It still asks before anything outside your folder.
@@ -279,7 +282,9 @@ Your AI OS comes set up so Claude can edit files in your folder and save to GitH
 
 - [ ] You have a GitHub account and a paid Claude account
 - [ ] VS Code, Git, and Claude Code are installed, and you're signed in
-- [ ] Your private copy is open in VS Code
+- [ ] Your private copy is open in VS Code, with no Restricted Mode bar
+- [ ] The Claude panel opens and answers you
+- [ ] Optional: `claude --version` shows a version number in the VS Code terminal
 - [ ] A chat from your computer shows up on your phone (Way 1)
 - [ ] You started a cloud session from your phone (Way 2)
 - [ ] Connected to your company's layer, if it has one
