@@ -132,9 +132,16 @@ Press **Ctrl+Shift+P** (Windows) or **Cmd+Shift+P** (Mac), type **Manage Workspa
 
 Install the **Claude** app on your phone and sign in with the same account. Then set up both ways:
 
-**Way 1: Remote Control (your phone drives your computer).** In Claude, type `/config` and press Enter, find **Enable Remote Control for all sessions**, and turn it on. Every chat on your computer now shows up in the app under **Code** with a laptop icon. Your computer has to be on.
+**Way 1: Remote Control (your phone drives your computer)**
 
-**Way 2: Cloud (no computer needed).** In the app, tap **Code**, connect **GitHub**, and start a session on your AI OS copy. Don't see your copy in the list? Ask whoever runs GitHub at your company to install the Claude GitHub app. When it's done, check the change landed on main. If not, tell Claude "merge this into main". Your computer pulls it in next time you open VS Code. Cloud sessions can't use keys saved on your computer.
+1. In Claude on your computer, type `/rc` and press Enter.
+2. The first time, it asks you to confirm. Pick **Enable Remote Control**.
+3. It shows a link and a **QR code**. Point your phone's camera at the QR code and tap the link. The chat opens in the Claude app. (No QR code showing? Type `/rc` again.)
+4. So you never have to scan again: type `/config`, find **Enable Remote Control for all sessions**, and turn it on. Every chat you start on your computer now shows up on your phone on its own.
+
+From now on, open the Claude app, tap **Code**, and tap the chat with the **computer icon** and a green dot. Your computer has to be on.
+
+**Way 2: Cloud (no computer needed).** In the app, tap **Code**, connect **GitHub** (it opens github.com to approve the Claude GitHub app, you don't need the GitHub phone app), and start a session on your AI OS copy. Don't see your copy in the list? Ask whoever runs GitHub at your company to install the Claude GitHub app. When it's done, check the change landed on main. If not, tell Claude "merge this into main". Your computer pulls it in next time you open VS Code. Cloud sessions can't use keys saved on your computer.
 
 ---
 
