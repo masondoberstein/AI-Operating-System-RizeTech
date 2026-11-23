@@ -30,18 +30,25 @@ This guide takes you from nothing to a working AI OS on your computer and your p
 
 **Already have a GitHub account:** sign in at **github.com** and send your username to whoever runs GitHub at your company so they can add you.
 
-### Claude (the AI)
+### Claude (the AI that runs your AI OS)
 
-**Got an invite email from Claude?** Click **Accept** and sign in with your work email. Your company pays, so there's no plan to pick.
+Your company sets up Claude one of two ways. Follow the one that matches.
 
-**No invite:**
+**Your company sent you an invite**
 
-1. Go to **claude.ai** and sign up with your work email.
-2. Pick **Pro**.
+1. Open the email from Anthropic and click **Accept invite**.
+2. Sign in with your work email.
+3. Your account is ready. Your company covers the plan.
 
-**Already have a personal Claude account:** keep it for personal use. Use your work email for this one so work stays separate.
+**Your company has you sign up yourself**
 
-![Pick the Pro plan](images/claude-pricing.png)
+1. Go to **claude.ai** and click **Sign up**.
+2. Sign up with your work email.
+3. Choose the **Pro** plan.
+
+![Choose the Pro plan](images/claude-pricing.png)
+
+Always sign in with your work email. If you already use Claude on a personal account, keep that one for personal use.
 
 ---
 
