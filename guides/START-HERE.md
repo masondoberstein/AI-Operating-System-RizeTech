@@ -137,7 +137,11 @@ Already have a personal Claude account? Keep it for personal use and follow one 
 7. VS Code asks "Do you trust the authors of the files in this folder?" Click **Yes, I trust the authors**. This one matters: if you skip it, VS Code opens in **Restricted Mode** and turns Claude off.
 8. In the column of icons on the far left, click the **Claude** spark (right under the four squares). The Claude panel opens. Your AI OS is ready.
 
-   **Don't see the Claude spark?** Look for **Restricted Mode** in a blue bar at the top or in the bottom left corner. Click **Manage**, then **Trust**. The spark comes back.
+   **Don't see the Claude spark?** Your folder is probably in **Restricted Mode** (a blue bar at the top, or "Restricted Mode" in the bottom left corner). Fix it:
+
+   1. Press **Ctrl+Shift+P** (Windows) or **Cmd+Shift+P** (Mac), type **Manage Workspace Trust**, and press Enter.
+   2. In the tab that opens, click the blue **Trust** button. When it says **"You trust this folder"**, close the tab with the **X**. Don't click **Don't Trust**.
+   3. Press **Ctrl+Shift+P** or **Cmd+Shift+P** again, type **Reload Window**, and press Enter. VS Code reloads and the Claude spark shows up in the left column.
 
    **A "Chat" panel opened on the right?** That's VS Code's own AI (Copilot), not Claude. Close it with the **X**.
 
