@@ -153,11 +153,13 @@ A **Claude Code** tab opens with the Claude logo and a box at the bottom that sa
 
 Some people like typing to Claude in a plain terminal instead of the panel. It's the same Claude and the same folder.
 
-1. Install the terminal version once:
-   - **Mac:** open the **Terminal** app, paste `curl -fsSL https://claude.ai/install.sh | bash`, and press Enter.
-   - **Windows:** open **PowerShell**, paste `irm https://claude.ai/install.ps1 | iex`, and press Enter.
-2. In VS Code, click **Terminal** in the top menu, then **New Terminal**. A terminal opens at the bottom, already inside your AI OS folder.
-3. Type `claude` and press Enter. The first time, it opens your browser to sign in. Click **Authorize**.
+1. In VS Code, click **Terminal** in the menu at the very top of your screen, then **New Terminal**. A terminal opens at the bottom of VS Code, already inside your AI OS folder.
+2. **First time only:** paste this into that terminal and press Enter. It installs the terminal version of Claude.
+   - **Mac:** `curl -fsSL https://claude.ai/install.sh | bash`
+   - **Windows:** `irm https://claude.ai/install.ps1 | iex`
+3. Type `claude` and press Enter. The first time, your browser opens to sign in. Click **Authorize**.
+
+After the first time, it's just **Terminal**, **New Terminal**, type `claude`.
 
 Use whichever you like. Everything in this guide works in both.
 
