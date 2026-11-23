@@ -95,7 +95,7 @@ Go to **code.visualstudio.com** and click **Download**.
 
    ![Source Control, then Clone Repository](images/vscode-clone.png)
 
-2. Paste the link in the box at the top, press Enter, and pick **Documents** as the place to save it.
+2. Paste **your copy's link** (the one you copied in step 4 above) in the box at the top, press Enter, and pick **Documents** as the place to save it.
 
    ![Paste the link and press Enter](images/vscode-paste-link.png)
 
@@ -168,4 +168,4 @@ Approve these once and every new person just follows this guide:
 
 ---
 
-VS Code screenshots are from the [VS Code documentation](https://github.com/microsoft/vscode-docs), © Microsoft, used under CC BY 3.0. Red marks added.
+VS Code screenshots are from the [VS Code documentation](https://github.com/microsoft/vscode-docs), © Microsoft, used under CC BY 3.0. Red marks and example links added.
