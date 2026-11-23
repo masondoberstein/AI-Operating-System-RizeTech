@@ -243,4 +243,4 @@ AI-Operating-System-RizeTech/
 
 MIT License. The Three Ms and Four Cs frameworks are by Nate Herk, used with credit. Includes Addy Osmani's [agent-skills](https://github.com/addyosmani/agent-skills) (MIT).
 
-Built by [RizeTech](https://rizetech.co). Want help rolling this out to your whole team? That's what we do.
+Built by [RizeTech](https://rizetech.co).
