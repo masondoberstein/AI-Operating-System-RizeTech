@@ -179,6 +179,8 @@ Requires Node.js 22 or newer. The renderer is prebuilt, so the app runs with `no
 
 ## What's in this folder
 
+> **This is just the starting layer.** These folders are a starting point, not a final shape. As your AI OS grows, you and Claude will add, remove, rename, and reshape them to fit how you actually work. Everyone's ends up different. Mason Doberstein, who created this repo, started from a layout much like this one, and his AI OS looks very different today. That's the point: it grows into yours.
+
 ```
 AI-Operating-System-RizeTech/
 ├── CLAUDE.md                        ← The brain. Claude reads this first, every time
