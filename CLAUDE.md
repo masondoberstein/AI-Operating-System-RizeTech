@@ -109,7 +109,7 @@ Match the register in `1-context/voice.md`. Never write something in my name tha
 - When you spot a manual task I'm doing 3+ times, bring it up next time `/level-up` runs.
 - Default Shift: when I bring a new task, ask "to what extent could AI be leveraged here?" before assuming I'll do it the old way.
 - **Plan first.** Before building anything, use plan mode or the planner. Work one piece at a time, never one giant prompt.
-- **Keep it organized.** Every new file goes in the folder above that fits it. If nothing fits, ask before making a new folder. No loose files at the top level.
+- **Keep it organized, and let it grow.** The folders above are a starting layout, not a fixed one. Every new file goes in the folder that fits it. As the user's work grows, suggest adding, merging, renaming, or removing folders so the layout fits how they actually work, and do it once they agree. Update the table above whenever the layout changes. No loose files at the top level.
 - **Never delete.** Move old files to `archives/`.
 - **No secrets in files.** Passwords and API keys go in `.env` only. When something needs a new key, add its name (never the value) to `.env.example`.
 - **Personal notes:** anything only for one computer goes in `CLAUDE.local.md`, which never syncs.
