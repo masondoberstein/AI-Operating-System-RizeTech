@@ -69,10 +69,10 @@ The folders follow the Four Cs, in order.
 |---|---|
 | `CLAUDE.md` | This file. The brain Claude reads first. |
 | `README.md` | What this is and how to start. |
-| `1-context/` | **Context:** everything about you. `intake.md` (your /onboard answers), `about-me.md`, `about-my-role.md`, `priorities.md`, `voice.md`, `decisions.md` (every decision, the date, and why, never edited, only added to), and `brainstorms/` (saved /grill-me interviews). |
-| `2-connections/` | **Connections:** `connections.md` (the tools and software this folder can reach, and whether each is connected) plus one short guide per connected tool. |
-| `3-capabilities/` | **Capabilities:** `workflows/` (step by step instructions for jobs that repeat) and `tools/` (scripts that each do one job). Skills live in `.claude/skills/`. |
-| `4-cadence/` | **Cadence:** `schedules.md` (everything that runs on its own) and `audits/` (dated /audit reports). |
+| `1-context/` | **Context:** everything about you. `about-me.md` (personal), `my-job.md` (title, job description, a normal week, what you're measured on), `my-company.md` (the company, how it's organized, its words and systems), `my-team.md`, `priorities/` (one file per quarter), `processes/` (how each process works today), `voice.md`, `intake.md` (your /onboard answers), `decisions.md` (every decision, the date, and why, only ever added to), and `brainstorms/` (saved /grill-me interviews). |
+| `2-connections/` | **Connections:** `connections.md` (the tools and software this folder can reach, and whether each is connected) plus one short guide per connected tool (from `_tool-guide-template.md`). |
+| `3-capabilities/` | **Capabilities:** `tasks-to-automate.md` (every task to get off your plate and its stage), `workflows/` (step by step instructions for jobs that repeat, from `_template.md`) and `tools/` (scripts that each do one job). Skills live in `.claude/skills/`. |
+| `4-cadence/` | **Cadence:** `rhythm.md` (your daily, weekly, monthly, and quarterly habits), `schedules.md` (everything that runs on its own) and `audits/` (dated /audit reports). |
 | `guides/` | `SETUP-GUIDE.md` (the step by step walkthrough), `3ms-framework.md` (how to think about AI work), `EXPANSIONS.md` (what to add as you grow). |
 | `archives/` | Old files. Nothing gets deleted, it moves here. |
 | `.env` | Passwords and keys, on your own computer only. Never on GitHub. |
