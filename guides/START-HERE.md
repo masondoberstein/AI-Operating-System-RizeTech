@@ -141,7 +141,14 @@ Install the **Claude** app on your phone and sign in with the same account. Then
 
 From now on, open the Claude app, tap **Code**, and tap the chat with the **computer icon** and a green dot. Your computer has to be on.
 
-**Way 2: Cloud (no computer needed).** In the app, tap **Code**, connect **GitHub** (it opens github.com to approve the Claude GitHub app, you don't need the GitHub phone app), and start a session on your AI OS copy. Don't see your copy in the list? Ask whoever runs GitHub at your company to install the Claude GitHub app. When it's done, check the change landed on main. If not, tell Claude "merge this into main". Your computer pulls it in next time you open VS Code. Cloud sessions can't use keys saved on your computer.
+**Way 2: Cloud (no computer needed)**
+
+1. In the Claude app, tap **Code**, then start a new session.
+2. The first time, it asks you to connect **GitHub**. It opens github.com in your phone's browser. Sign in and approve the **Claude** app, and give it access to your AI OS copy. You don't need the GitHub phone app.
+3. Pick your AI OS copy and type what you need. The session shows a **cloud** icon.
+4. When it's done, tell Claude: "save this to main". Your computer pulls the change in the next time you open your AI OS.
+
+Your copy not in the list? Ask whoever runs GitHub at your company to approve the Claude app for the company's GitHub. Cloud sessions can't use keys saved on your computer. For that, use Way 1.
 
 ---
 
