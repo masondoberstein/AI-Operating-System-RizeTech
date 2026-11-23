@@ -50,7 +50,7 @@ Go to **code.visualstudio.com** and click **Download**.
 
   ![Click here to download](images/git-windows.png)
 
-- **Mac:** open the **Terminal** app, type `git --version`, and press Enter. If a box asks to install developer tools, click **Install**.
+- **Mac:** in VS Code, click **Terminal** in the menu at the top of your screen, then **New Terminal**. Type `git --version` and press Enter. If a box asks to install developer tools, click **Install** and wait for it to finish.
 
 ---
 
@@ -64,7 +64,7 @@ Go to **code.visualstudio.com** and click **Download**.
    - **Mac:** `echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc`
    - **Windows:** `[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH','User') + ";$env:USERPROFILE\.local\bin", 'User')`
 4. **Quit VS Code completely** (Cmd+Q on Mac, close every window on Windows) and open it again.
-5. Open **Terminal**, then **New Terminal**, type `claude --version`, and press Enter. A version number means it worked.
+5. In VS Code, click **Terminal**, then **New Terminal**. Type `claude --version` and press Enter. A version number means it worked.
 
 **"Not recognized" or "command not found":** do steps 3 and 4 again. **"Access denied", blocked, or a virus warning:** your company's security is blocking it. Send IT the exact message, and use the Claude panel instead (see "Terminal blocked?" at the end).
 
@@ -99,17 +99,20 @@ Go to **code.visualstudio.com** and click **Download**.
 
    ![Paste the link and press Enter](images/vscode-paste-link.png)
 
-3. If asked to sign in to GitHub, click **Allow**, then **Authorize** in the browser.
-4. Click **Open**, then **Yes, I trust the authors**.
+3. Because your copy is private, GitHub asks you to sign in. Click **Allow** (or **Sign in with your browser** on Windows), then **Authorize** in the browser.
+4. When the copy finishes downloading, click **Open**, then **Yes, I trust the authors**.
 
    ![Yes, I trust the authors](images/vscode-trust.png)
 
 5. Click **Terminal**, then **New Terminal**. Type `claude` and press Enter.
-6. The first time, Claude asks if you trust this folder. Press Enter for **Yes**.
-7. Your browser opens to sign in. Make sure it's signed in with your **work email** (if it shows a personal account, log out and back in), then click **Authorize**. If it shows a code instead, copy it and paste it into the terminal.
-8. Type to Claude right there in the terminal. You're in.
+6. The first time, Claude asks a few setup questions. Use the arrow keys and Enter to answer:
+   - **Color theme:** pick any one.
+   - **How to sign in:** pick **Claude account with subscription**.
+7. Your browser opens to Claude. Make sure it's signed in with your **work email** (if it shows a personal account, log out and back in), then click **Authorize**. If it shows a code instead, copy it and paste it into the terminal.
+8. Back in the terminal, press Enter through any notes. When it asks if you trust this folder, pick **Yes**.
+9. Type to Claude right there in the terminal. You're in.
 
-**A blue "Restricted Mode" bar?**
+**A blue "Restricted Mode" bar?** You skipped the trust step in step 4. Fix it so everything works:
 
 ![Restricted Mode bar](images/vscode-restricted.png)
 
@@ -125,7 +128,7 @@ Install the **Claude** app on your phone and sign in with the same account. Then
 
 **Way 1: Remote Control (your phone drives your computer).** In Claude, type `/config` and press Enter, find **Enable Remote Control for all sessions**, and turn it on. Every chat on your computer now shows up in the app under **Code** with a laptop icon. Your computer has to be on.
 
-**Way 2: Cloud (no computer needed).** In the app, tap **Code**, connect **GitHub**, and start a session on your AI OS copy. When it's done, check the change landed on main. If not, tell Claude "merge this into main". Your computer pulls it in next time you open VS Code. Cloud sessions can't use keys saved on your computer.
+**Way 2: Cloud (no computer needed).** In the app, tap **Code**, connect **GitHub**, and start a session on your AI OS copy. Don't see your copy in the list? Ask whoever runs GitHub at your company to install the Claude GitHub app. When it's done, check the change landed on main. If not, tell Claude "merge this into main". Your computer pulls it in next time you open VS Code. Cloud sessions can't use keys saved on your computer.
 
 ---
 
