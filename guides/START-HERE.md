@@ -37,7 +37,7 @@ This guide takes you from nothing to a working AI OS on your computer and your p
 **No invite:**
 
 1. Go to **claude.ai** and sign up with your work email.
-2. Pick **Pro**. Ask your manager how your company wants it paid.
+2. Pick **Pro**.
 
 **Already have a personal Claude account:** keep it for personal use. Use your work email for this one so work stays separate.
 
