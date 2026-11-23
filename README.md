@@ -155,47 +155,45 @@ Requires Node.js 22 or newer. The renderer is prebuilt, so the app runs with `no
 
 ---
 
-## Repo layout
+## What's in this folder
 
-```
-AI-Operating-System-RizeTech/
-├── README.md
-├── SETUP-GUIDE.md                   ← Step by step through the Four Cs
-├── CLAUDE.md                        ← Operating manual for Claude Code
-├── EXPANSIONS.md                    ← What to add as you grow
-├── CHANGELOG.md / VERSION
-├── LICENSE
-├── .gitignore
-├── .env.example                     ← Names of the keys you need (values stay in .env)
-├── aios-intake.md                   ← Source-of-truth for /onboard. Edit + re-run any time.
-├── connections.md                   ← Registry of every system your AI OS can reach
-├── context/                         ← About you, your work (filled by /onboard)
-├── references/
-│   └── 3ms-framework.md             ← The operator brain
-├── decisions/
-│   └── log.md                       ← Append-only record of what was decided and why
-├── workflows/                       ← Step by step instructions for jobs that repeat
-├── tools/                           ← Scripts that each do one job
-├── archives/                        ← Old stuff. Don't delete. Move here.
-├── brainstorms/                     ← Created by /grill-me; saved interviews
-├── audits/                          ← Created on first audit; dated reports
-└── .claude/
-    ├── settings.json                ← Sonnet with an Opus advisor, the 3 automatic rules
-    ├── hooks/                       ← auto-pull, auto-save, block-keys
-    ├── agents/                      ← planner, builder, checker
-    └── skills/
-        ├── onboard/
-        ├── grill-me/
-        ├── next-step/
-        ├── make-a-skill/
-        ├── audit/
-        ├── link/
-        ├── level-up/
-        ├── session-handoff/
-        ├── agent-skills/
-        ├── save/
-        └── 3d-brain/                ← Skill, portable app template, docs, and validation scripts
-```
+You only need to open two of these. The rest is your AI OS's memory, which fills itself in as you use it, and the machinery that runs it.
+
+### 1. Start here (read these)
+
+| File | What it is |
+|---|---|
+| `README.md` | This page. What it is and how to start. |
+| `SETUP-GUIDE.md` | Your step by step walkthrough, from setup to a working AI OS. |
+
+### 2. Your AI OS's memory (fills in as you use it)
+
+You don't need to edit these by hand. `/onboard`, `/grill-me`, and everyday use fill them in for you.
+
+| File or folder | What it holds |
+|---|---|
+| `CLAUDE.md` | The brain. The first thing Claude reads every time: who you are, how you work, what it can do. |
+| `aios-intake.md` | Your answers to the seven `/onboard` questions. |
+| `context/` | Everything about you: your role, your team, your company, your priorities. |
+| `connections.md` | The list of tools your AI OS can reach. |
+| `decisions/` | A running log of what you decided and why. |
+| `brainstorms/` | Every `/grill-me` interview, saved. |
+| `workflows/` | Step by step instructions for jobs you repeat. |
+| `tools/` | Small scripts that do one job each. |
+| `references/` | Guides it reads, like the Three Ms and how each of your tools works. |
+| `audits/` | Your `/audit` report cards, so you can see your score go up. |
+| `archives/` | Old files. Nothing ever gets deleted, it moves here. |
+
+### 3. Behind the scenes (you never need to open these)
+
+| File or folder | What it does |
+|---|---|
+| `.claude/` | The engine: all the skills, the three helpers, the settings, and the automatic rules. |
+| `.env.example` | The names of any passwords or keys you'll need. The real ones go in a private `.env` file on your computer. |
+| `.gitignore` | The list of files that should never go to GitHub, like your passwords. |
+| `EXPANSIONS.md` | Ideas for new folders to add once you've been using it a while. |
+| `CHANGELOG.md` and `VERSION` | Which version you have and what changed. |
+| `LICENSE` | The free to use license and credits. |
 
 See `EXPANSIONS.md` for what to add as you grow (projects/, templates/, scripts/, sub-OS folders, etc.).
 
