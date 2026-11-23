@@ -145,6 +145,22 @@ Already have a personal Claude account? Keep it for personal use and follow one 
 
    **A "Chat" panel opened on the right?** That's VS Code's own AI (Copilot), not Claude. Close it with the **X**.
 
+### What you'll see
+
+A **Claude Code** tab opens with the Claude logo and a box at the bottom that says **Ask Claude to edit...**. That box is where you type to Claude. Close any notes above it (like "Auto mode is enabled") with their **X**. On the left you'll see your account and how much of your weekly limit you've used.
+
+### Prefer a terminal? (optional)
+
+Some people like typing to Claude in a plain terminal instead of the panel. It's the same Claude and the same folder.
+
+1. Install the terminal version once:
+   - **Mac:** open the **Terminal** app, paste `curl -fsSL https://claude.ai/install.sh | bash`, and press Enter.
+   - **Windows:** open **PowerShell**, paste `irm https://claude.ai/install.ps1 | iex`, and press Enter.
+2. In VS Code, click **Terminal** in the top menu, then **New Terminal**. A terminal opens at the bottom, already inside your AI OS folder.
+3. Type `claude` and press Enter. The first time, it opens your browser to sign in. Click **Authorize**.
+
+Use whichever you like. Everything in this guide works in both.
+
 ---
 
 ## Part 6: Put it on your phone
