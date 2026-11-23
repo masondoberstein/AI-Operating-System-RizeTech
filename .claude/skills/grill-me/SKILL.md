@@ -9,7 +9,7 @@ Pull what the user knows out of their head and into this folder, one question at
 
 ## Before the first question
 
-1. Read `CLAUDE.md`, the files in `1-context/` that fit the topic, `1-context/decisions.md`, and any earlier capture in `1-context/brainstorms/` on the same topic.
+1. Read `CLAUDE.md`, the files in `1-context/` that fit the topic (including `sops/`, `meetings/`, and `documents/`), the company handbook if a company layer is connected, `1-context/decisions.md`, and any earlier capture in `1-context/brainstorms/` on the same topic.
 2. **Make the capture file now**, before asking anything: `1-context/brainstorms/{YYYY-MM-DD}-{topic}.md` (make the `1-context/brainstorms/` folder if it doesn't exist). Get today's real date from the computer. Never overwrite an earlier capture; add a time to the name if one exists for today. Start it with a title, the date, the goal, and an empty "Open questions" section.
 3. Tell the user where you're saving, in one line.
 4. If no topic was given, ask what to focus on today, with a guess from what's already in the folder. For example: "Want to start with the task that eats your week?"

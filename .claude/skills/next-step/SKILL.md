@@ -10,6 +10,8 @@ Find which layer of `guides/SETUP-GUIDE.md` the user is on, say it in plain word
 ## Check the folder (read only, don't ask what you can see)
 
 **Context**
+- `1-context/sops/`, `1-context/meetings/`, `1-context/documents/`: has the user added any SOPs or documents? Anything waiting in `1-context/inbox/`? If so, suggest `/add-doc`.
+- Company layer: `.claude/settings.json` has a `company@...` entry if they're connected. If not, ask once whether their company has one (`/connect-company`); it's optional.
 - `1-context/intake.md` still has `[Your answer here]`, or `CLAUDE.md` still has `{{Your Name}}`: /onboard isn't done.
 - `1-context/about-me.md`, `my-job.md`, `my-company.md`, `my-team.md`, the current quarter in `1-context/priorities/`, and `voice.md` are filled in (not just headings). List which are still mostly empty.
 - `1-context/brainstorms/` has /grill-me sessions on: their role, their team, their company, the task that eats their week. List which of the four are covered.
@@ -20,7 +22,7 @@ Find which layer of `guides/SETUP-GUIDE.md` the user is on, say it in plain word
 
 **Capabilities**
 - `3-capabilities/tasks-to-automate.md`: how many tasks are listed and what stage each is at.
-- Skills in `.claude/skills/` beyond the ones that ship with the starter (onboard, grill-me, save, make-a-skill, next-step, session-handoff, level-up, link, audit, agent-skills, 3d-brain). Those extra skills are the user's own.
+- Skills in `.claude/skills/` beyond the ones that ship with the starter (onboard, grill-me, save, make-a-skill, next-step, session-handoff, level-up, link, audit, agent-skills, 3d-brain, add-doc, connect-company, setup-company, share-skill). Those extra skills are the user's own.
 
 **Cadence**
 - `4-cadence/audits/` has a report.

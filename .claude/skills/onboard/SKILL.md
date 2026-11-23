@@ -73,6 +73,12 @@ Once the intake is complete, generate these files (or update if re-running). Bac
 6. **`2-connections/connections.md`**: one row for each tool the user actually named in Q4 to Q7, with what they use it for and `not yet connected`. No fixed categories and no tools they didn't mention. However many they use is the right number.
 7. **`CLAUDE.md`**: fill the `{{...}}` placeholders with the user's name, priority, knowledge base, and connections summary. In an established manual, update only the selected context or its route; preserve other instructions.
 
+### Step 3b: Connect the company (one question)
+
+Ask: "Does your company have a shared AI layer (a company handbook and shared skills)? If you have its link, paste it. Otherwise just say no." If they paste one, run `/connect-company`. If no, move on; it works fine alone.
+
+Then mention they can drop SOPs, meeting notes, or any document into `1-context/inbox/` and type `/add-doc`.
+
 ### Step 4: The closing screen
 
 Print one screen. Three lines max:
