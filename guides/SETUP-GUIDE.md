@@ -68,7 +68,7 @@ You can always come back and add more. More context and more connections only ma
 
 At work, check with your IT team before connecting any company system.
 
-After each connection, Claude updates `2-connections/connections.md` and saves a short guide in `2-connections/` so it never has to figure that tool out twice. Use **/link** to point it at any important folder, project, or document.
+After each connection, Claude updates `2-connections/connections.md` and saves a short guide in `2-connections/` (one file per tool) so it never has to figure that tool out twice. Use **/link** to point it at any important folder, project, or document.
 
 **You're done with Connections when** your main tools are connected and you can ask a real question that needs each one ("what's on my calendar Thursday?", "what did the customer say in yesterday's email?") and get a real answer. You can add more any time.
 
@@ -80,7 +80,7 @@ After each connection, Claude updates `2-connections/connections.md` and saves a
 
 Every task moves through the same stages: you do it by hand, you ask AI for help, you prompt it better, you save it as a skill, you fix the skill until it's right, and finally it runs on its own as an agent. (The full picture is in "The life of a task" in `README.md`.) This layer takes your tasks from stage 3 to stage 5.
 
-**Step 6. Pick a task and make it a skill.** Ask yourself: what do I do every week that follows the same steps? A meeting brief, a status report, an email reply, a lead list, cleaning up a spreadsheet. Do it once with Claude using the real files and correct it until it's right. Then say **"turn this into a skill"** (or type **/make-a-skill**).
+**Step 6. Pick a task and make it a skill.** Open `3-capabilities/tasks-to-automate.md`: your list of tasks you want off your plate, already started by `/onboard`. Pick one, or ask yourself: what do I do every week that follows the same steps? A meeting brief, a status report, an email reply, a lead list, cleaning up a spreadsheet. Do it once with Claude using the real files and correct it until it's right. Then say **"turn this into a skill"** (or type **/make-a-skill**).
 
 **Step 7. Run it fresh and fix it.** Start a new chat and run your new skill on a new example. If anything's off, tell Claude what was wrong and say **"fix the skill so this doesn't happen again."** Every fix makes it better for good.
 
