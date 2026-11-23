@@ -57,8 +57,10 @@ Go to **code.visualstudio.com** and click **Download**.
 ## Part 4: Install Claude Code
 
 1. Open **VS Code**. In the column of icons on the far left, click the **four small squares** (Extensions).
-2. Search **Claude Code**, pick the one by **Anthropic**, and click **Install**.
-3. A **Claude** spark appears in the left column, under the four squares. Click it, click **Sign in**, pick **Claude.ai subscription**, and click **Authorize** in the browser.
+2. Search **Claude Code**, pick the one by **Anthropic**, and click **Install**. If it asks whether you trust the publisher, click **Trust Publisher & Install**.
+3. A **Claude** spark appears in the left column, under the four squares. Click it, click **Sign in**, and pick **Claude.ai subscription**.
+4. Your web browser opens to Claude. Make sure it's signed in with your **work email** (if it shows a personal account, log out and back in). Click **Authorize**.
+5. If the browser asks to open Visual Studio Code, click **Open**. If it shows a code instead, copy it and paste it into VS Code.
 
 ---
 
