@@ -184,7 +184,7 @@ No Claude spark? Do the **Restricted Mode** fix in Part 5. For Remote Control in
 
 Approve these once and every new person just follows this guide:
 
-- **GitHub:** a seat for each person. Let members create **Private** repos only (organization **Settings**, **Member privileges**, **Repository creation**). Install the **Claude GitHub app** on the organization so cloud sessions work. Organization owners can see every private repo, so tell people who that is.
+- **GitHub:** a seat for each person. Let members create **Private** repos only (organization **Settings**, **Member privileges**, **Repository creation**). Install the **Claude GitHub app** on the organization so cloud sessions work. Good to know: owners of the company GitHub can see inside every private repo, including each person's AI OS. Coworkers can't see each other's. It helps to let people know who the owners are.
 - **Claude:** which plan people use and who pays. On Team or Enterprise, turn on **Claude Code**, **Remote Control**, and **cloud sessions** in the admin settings.
 - **Laptops:** allow VS Code and Git, or push them to laptops yourself so employees can skip Parts 2 and 3. Claude Code runs in the terminal: allow downloads from `claude.ai` and the program at `%USERPROFILE%\.local\bin\claude.exe` (Windows) or `~/.local/bin/claude` (Mac). No admin rights needed.
 - **Connections:** which company systems (email, calendar, files, chat) people may connect, and who approves each.
