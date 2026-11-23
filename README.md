@@ -168,8 +168,8 @@ AI-Operating-System-RizeTech/
 │   ├── decisions.md                 ← Append-only record of what was decided and why
 │   └── brainstorms/                 ← Created by /grill-me; saved interviews
 │
-├── 2-connections/                   ← CONNECTIONS: the tools it can reach
-│   └── connections.md               ← Every tool you use and whether it's connected
+├── 2-connections/                   ← CONNECTIONS: the tools and software it can reach
+│   └── connections.md               ← Every tool and piece of software, and whether it's connected
 │
 ├── 3-capabilities/                  ← CAPABILITIES: the work it can do
 │   ├── workflows/                   ← Step by step instructions for jobs that repeat
@@ -195,7 +195,7 @@ AI-Operating-System-RizeTech/
                                        link, audit, session-handoff, agent-skills, save, 3d-brain
 ```
 
-**In plain English:** the folders are numbered in the same order you build your AI OS. **1-context** is everything it knows about you. **2-connections** is the tools it can reach. **3-capabilities** is the work it knows how to do. **4-cadence** is what runs on its own. You only need to open two files yourself: this page and `guides/SETUP-GUIDE.md`. Everything else fills itself in as you use it, and `.claude` is the engine you never need to touch.
+**In plain English:** the folders are numbered in the same order you build your AI OS. **1-context** is everything it knows about you. **2-connections** is the tools and software it can reach. **3-capabilities** is the work it knows how to do. **4-cadence** is what runs on its own. You only need to open two files yourself: this page and `guides/SETUP-GUIDE.md`. Everything else fills itself in as you use it, and `.claude` is the engine you never need to touch.
 
 ### What each part is
 
@@ -203,7 +203,7 @@ AI-Operating-System-RizeTech/
 |---|---|
 | `CLAUDE.md` | The brain. The first thing Claude reads every time: who you are, how you work, what it can do. |
 | `1-context/` | Everything about you: your `/onboard` answers, your role, team, company, priorities, how you write, every decision, and every `/grill-me` interview. |
-| `2-connections/` | The list of tools your AI OS can reach, plus a short guide for each one it's connected to. |
+| `2-connections/` | The tools and software your AI OS can reach, plus a short guide for each one it's connected to. |
 | `3-capabilities/` | Step by step instructions for jobs you repeat, and small scripts that do one job each. Your skills live in `.claude/skills/`. |
 | `4-cadence/` | Everything that runs on a schedule, and your `/audit` report cards so you can see your score go up. |
 | `guides/` | The setup walkthrough, the Three Ms, and ideas for what to add as you grow. |
