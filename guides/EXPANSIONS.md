@@ -31,7 +31,7 @@ The AIOS structure should look like a small, well-run business. Not a hoarder's 
 | `projects/` | You start running 2+ ongoing workstreams that have their own context | Active projects need scoped context separate from the evergreen `1-context/` files |
 | `templates/` | You catch yourself copy-pasting the same prompts or doc scaffolds | Reusable, parameterized starting points; reduces drift |
 | `brand-assets/` | You generate visual content (carousels, slides, thumbnails, images) | Centralizes logos, palettes, fonts, voice/tone: the AIOS reaches in instead of guessing |
-| `guides/sops/` | You document how recurring processes run | Standard operating procedures the AIOS reads to run things consistently |
+| `1-context/sops/` | You document how recurring processes run | Standard operating procedures the AIOS reads to run things consistently |
 | `2-connections/{tool}.md` | You connect a new API or MCP and figure out how it works | Researched-once-saved-forever. `/audit` rewards this; future skills don't re-research. |
 | Sub-OS folders (e.g. `youtube-os/`) | You have a vertical with its own data, sheets, transcripts, scripts | Isolation pattern: vertical workflows get their own scoped operating manual + skills |
 
@@ -43,7 +43,7 @@ When each surface gets routinely touched:
 
 - `1-context/decisions.md`: every meaningful decision (`/level-up` logs these automatically)
 - `archives/`: quarterly cleanup; move stale projects, deprecated skills, old intake versions
-- `guides/sops/`: when a process gets re-run by someone new, write the SOP
+- `1-context/sops/`: when a process gets re-run by someone new, write the SOP
 - `2-connections/connections.md`: every time a new tool gets wired in, add a row
 - `2-connections/{tool}.md`: same time as `2-connections/connections.md` update; capture the API once
 - `CLAUDE.md`: quarterly review; rewrite the persona/priorities section every quarter
