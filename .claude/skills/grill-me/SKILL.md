@@ -37,7 +37,8 @@ Good ground to cover for someone's work, skipping what's already known:
 The moment an answer lands, before asking the next question:
 1. **Add it to the capture file**: the question, what they said, anything still unsure, and any open question with its owner. One answer per save, never several at once. If a later answer changes an earlier one, keep the old entry and mark it replaced.
 2. **Put confirmed facts where they belong:**
-   - Facts about their work go in the matching file in `1-context/` (for example `1-context/team.md`, `1-context/current-process.md`). Make the file if it doesn't exist.
+   - Facts go in the matching file in `1-context/`: `about-me.md` (personal), `my-job.md` (title, job description, a normal week, what they're measured on), `my-company.md` (what the company does, how it's organized, words and systems), `my-team.md` (who does what), and the current quarter in `1-context/priorities/`. For a specific process, copy `1-context/processes/_template.md` to `1-context/processes/{name}.md` and fill it in.
+   - Any task they'd like off their plate gets a row in `3-capabilities/tasks-to-automate.md` (how often, time each time, stage 1).
    - Anything that changes how Claude should work goes in `CLAUDE.md`. Keep CLAUDE.md short and point to `1-context/` for detail.
    - Anything decided goes in `1-context/decisions.md` with today's date and why.
    - Guesses and ideas stay in the capture file until the user confirms them.

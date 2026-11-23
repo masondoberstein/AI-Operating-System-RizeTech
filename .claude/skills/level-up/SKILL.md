@@ -28,8 +28,9 @@ This is the brain-rewire mechanism. The kit doesn't need cron jobs to anchor beh
 
 First read the applicable operating manual. The paths below are starter-kit defaults: resolve priorities, identity, and connections through the current project's declared routes when it uses different locations. Do not create duplicate context files because these defaults are absent. Use `guides/3ms-framework.md` if present; otherwise read the bundled [3Ms framework](references/3ms-framework.md). Ask only for information unavailable in the existing sources.
 
-- `1-context/priorities.md` — what the user said matters
-- `1-context/about-me.md` — top_pain, role
+- `1-context/priorities/` (the current quarter's file) — what the user said matters
+- `1-context/about-me.md` and `1-context/my-job.md` — role, what they're measured on, where work goes wrong
+- `3-capabilities/tasks-to-automate.md` — the user's list of tasks to automate; pull candidates from here first, and update the row's stage and next step after the run
 - `2-connections/connections.md` — what's reachable, by what mechanism
 - `guides/3ms-framework.md` — the framework (used to quote principles back)
 - `1-context/decisions.md` — recent decisions (what's already shipped or considered)

@@ -65,12 +65,13 @@ Domain 3 (Calendar) is auto-inferred from Q5: Gmail → Google Cal; Outlook → 
 
 Once the intake is complete, generate these files (or update if re-running). Back up originals to `archives/intake-{YYYY-MM-DD-HHMM}/` if any exist.
 
-1. **`1-context/about-me.md`**: from Q1 (name, title, team, manager) + Q7 (top_pain). One short paragraph each.
-2. **`1-context/about-my-role.md`**: from Q1 (who depends on their work) + Q4 (what they're measured on and where). One paragraph.
-3. **`1-context/priorities.md`**: from Q3. Numbered list, one line per priority.
-4. **`1-context/voice.md`**: from Q2. Paste samples verbatim with a short header explaining their use ("Match this register when drafting; don't fake voice on external content without showing me first").
-5. **`2-connections/connections.md`**: one row for each tool the user actually named in Q4 to Q7, with what they use it for and `not yet connected`. No fixed categories and no tools they didn't mention. However many they use is the right number.
-6. **`CLAUDE.md`**: fill the `{{...}}` placeholders with the user's name, priority, knowledge base, and connections summary. In an established manual, update only the selected context or its route; preserve other instructions.
+1. **`1-context/about-me.md`**: fill the template from Q1 (name, title) and how they like to work if they said. Keep the headings; leave blanks for /grill-me.
+2. **`1-context/my-job.md`**: fill the template from Q1 (title, team, manager, who depends on their work), Q4 (what they're measured on and where), and Q7 (where their work goes wrong). Also fill what Q1 says about the company in **`1-context/my-company.md`**.
+3. **`1-context/priorities/`**: put the Q3 answers in the file for the current quarter (for example `2026-q4.md`), keeping its headings. If the current quarter or the next four quarters have no file yet, copy the newest one's headings to make them (named `YYYY-qN.md`), empty.
+4. **`3-capabilities/tasks-to-automate.md`**: replace the placeholder row with the task from Q7 (top_pain): how often, time each time, stage 1, next step "/grill-me on it".
+5. **`1-context/voice.md`**: from Q2. Paste samples verbatim with a short header explaining their use ("Match this register when drafting; don't fake voice on external content without showing me first").
+6. **`2-connections/connections.md`**: one row for each tool the user actually named in Q4 to Q7, with what they use it for and `not yet connected`. No fixed categories and no tools they didn't mention. However many they use is the right number.
+7. **`CLAUDE.md`**: fill the `{{...}}` placeholders with the user's name, priority, knowledge base, and connections summary. In an established manual, update only the selected context or its route; preserve other instructions.
 
 ### Step 4: The closing screen
 
@@ -105,6 +106,6 @@ The Default Shift question seeds the Mindset framework before `/level-up` formal
 ## Verification (for the implementer)
 
 - Cold-test: clone a fresh kit, run `/onboard`, fill 7 answers, scaffold runs, ask the wow prompt, response cites Q1 + Q3 + Q7 specifically. Generic = fail.
-- Idempotency: re-run `/onboard` with one Q3 priority changed. Expected: only `1-context/priorities.md` and `CLAUDE.md`'s priority section update; backup created in `archives/intake-{ts}/`.
+- Idempotency: re-run `/onboard` with one Q3 priority changed. Expected: only the current quarter file in `1-context/priorities/` and `CLAUDE.md`'s priority section update; backup created in `archives/intake-{ts}/`.
 - Voice rejection: type a sample mid-chat. Expected: skill refuses, asks for paste.
 

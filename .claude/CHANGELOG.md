@@ -2,6 +2,12 @@
 
 Which version of the AI Operating System - RizeTech this folder started from is in `.claude/VERSION`. Your copy is yours: later versions of the starter never change it.
 
+## 1.9.0 (2026-11-23)
+
+- `1-context/` comes organized: `about-me.md`, `my-job.md` (title, job description, a normal week, what you're measured on), `my-company.md`, `my-team.md`, `priorities/` (one file per quarter, Q4 2026 through Q4 2027), `processes/` (with a template), `voice.md`, each with headings to fill.
+- Starter files in every layer: `2-connections/_tool-guide-template.md`, `3-capabilities/workflows/_template.md`, `3-capabilities/tools/README.md`, `4-cadence/rhythm.md`.
+- New `3-capabilities/tasks-to-automate.md`: every task to get off your plate and its stage (manual to runs on its own). /onboard starts it, /grill-me and /level-up add to it, /make-a-skill moves tasks along.
+
 ## 1.8.0 (2026-11-23)
 
 - Folders organized by the Four Cs: `1-context/`, `2-connections/`, `3-capabilities/`, `4-cadence/`, plus `guides/`. Only `CLAUDE.md`, `README.md`, and `LICENSE` stay at the top.

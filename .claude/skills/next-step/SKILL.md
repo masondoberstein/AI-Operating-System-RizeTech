@@ -11,7 +11,7 @@ Find which layer of `guides/SETUP-GUIDE.md` the user is on, say it in plain word
 
 **Context**
 - `1-context/intake.md` still has `[Your answer here]`, or `CLAUDE.md` still has `{{Your Name}}`: /onboard isn't done.
-- `1-context/` has the files /onboard makes (about me, my role, priorities) and `1-context/voice.md` exists.
+- `1-context/about-me.md`, `my-job.md`, `my-company.md`, `my-team.md`, the current quarter in `1-context/priorities/`, and `voice.md` are filled in (not just headings). List which are still mostly empty.
 - `1-context/brainstorms/` has /grill-me sessions on: their role, their team, their company, the task that eats their week. List which of the four are covered.
 
 **Connections**
@@ -19,11 +19,12 @@ Find which layer of `guides/SETUP-GUIDE.md` the user is on, say it in plain word
 - `2-connections/` has a guide for each connected tool.
 
 **Capabilities**
+- `3-capabilities/tasks-to-automate.md`: how many tasks are listed and what stage each is at.
 - Skills in `.claude/skills/` beyond the ones that ship with the starter (onboard, grill-me, save, make-a-skill, next-step, session-handoff, level-up, link, audit, agent-skills, 3d-brain). Those extra skills are the user's own.
 
 **Cadence**
 - `4-cadence/audits/` has a report.
-- Anything scheduled to run on its own (look in `1-context/decisions.md` and `3-capabilities/workflows/`, then ask if unsure).
+- `4-cadence/schedules.md` lists anything that runs on its own (check `1-context/decisions.md` and `3-capabilities/workflows/` too, then ask if unsure).
 
 ## Tell them where they are
 
