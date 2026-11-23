@@ -2,6 +2,11 @@
 
 Which version of the AI Operating System - RizeTech this folder started from is in `.claude/VERSION`. Your copy is yours: later versions of the starter never change it.
 
+## 2.2.0 (2026-11-23)
+
+- `guides/START-HERE.md` rewritten as a step by step guide anyone can follow: accounts, VS Code, Git (Windows and Mac), Claude Code sign in, your copy with the Clone Repository button, phone (Remote Control and cloud), company layer, then /onboard and what's next. Screenshots with arrows in `guides/images/`. New tables for the one time pop ups and for what IT approves.
+- Claude no longer asks before every edit: `.claude/settings.json` accepts edits in your folder and allows git, list, and read commands. Anything outside your folder still asks.
+
 ## 2.1.0 (2026-11-23)
 
 - New `guides/START-HERE.md`: one document from zero to working. Accounts, installs, your own copy, /onboard, both ways to use it from your phone (Remote Control and cloud sessions), the company layer, and what's next. README and CLAUDE.md point to it.
