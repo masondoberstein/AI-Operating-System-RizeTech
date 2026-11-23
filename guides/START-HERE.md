@@ -116,6 +116,8 @@ Already have a personal Claude account? Keep it for personal use and follow one 
    - **(3) Visibility:** click it and pick **Private**. Never leave it on Public.
    - **(4)** Click **Create repository**.
 
+   If your company isn't in the **Owner** list, or **Private** isn't an option, your company hasn't turned on repo creation for employees yet. Ask whoever runs GitHub at your company to turn it on or make the repo for you.
+
 ![Owner, name, visibility, create](images/new-repo.png)
 
 ![Pick Private](images/private.png)
@@ -232,7 +234,7 @@ Your AI OS comes set up so Claude can edit files in your folder and save to GitH
 
 Approve these once and every new person is just this checklist:
 
-- **GitHub:** a seat in the company GitHub for each person, every AI OS copy set to **Private**, and the **Claude GitHub app** installed on the company GitHub so cloud sessions (Way 2) work.
+- **GitHub:** a seat in the company GitHub for each person. Let employees make their own private repos (organization **Settings**, then **Member privileges**, then **Repository creation**: check **Private** only). Install the **Claude GitHub app** on the company GitHub so cloud sessions (Way 2) work. Owners of the company GitHub can see every private repo, so tell employees who that is.
 - **Claude:** which plan people use (Pro, Team, or Enterprise) and who pays. On Team or Enterprise, an owner turns on **Claude Code**, **Remote Control**, and **cloud sessions** in the admin settings.
 - **Laptops:** permission to install VS Code, Git, and the Claude Code extension. IT can also push Claude Code settings to every laptop at once (managed settings) so nobody sets them by hand.
 - **Connections:** which company systems (email, calendar, files, chat) people's AI OS may connect to, and who approves each one.
