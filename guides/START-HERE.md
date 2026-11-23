@@ -32,7 +32,7 @@ This guide takes you from nothing to a working AI OS on your computer and your p
 
 ### Claude (the AI that runs your AI OS)
 
-Your company sets up Claude one of two ways. Follow the one that matches.
+Follow the one that matches you.
 
 **Your company sent you an invite**
 
@@ -48,7 +48,12 @@ Your company sets up Claude one of two ways. Follow the one that matches.
 
 ![Choose the Pro plan](images/claude-pricing.png)
 
-Always sign in with your work email. If you already use Claude on a personal account, keep that one for personal use.
+**You already have a Claude account with your work email**
+
+1. Go to **claude.ai** and log in.
+2. Check your plan. If it says **Free**, upgrade to **Pro**. Pro or higher, you're all set.
+
+Already have a personal Claude account? Keep it for personal use and follow one of the options above with your work email.
 
 ---
 
