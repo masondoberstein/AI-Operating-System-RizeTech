@@ -93,7 +93,7 @@ Full breakdown in `guides/3ms-framework.md`. The `/level-up` skill walks you thr
 
 ---
 
-## What ships — 11 skills, 3 helpers, 3 automatic rules
+## What ships — 15 skills, 3 helpers, 3 automatic rules, and a company layer
 
 The kit includes setup, ongoing context interviews, a guided next step, skill building, routing, verification, a weekly improvement workflow, and a working 3D knowledge explorer. You can extend the structure as your AI OS grows.
 
@@ -103,12 +103,16 @@ The kit includes setup, ongoing context interviews, a guided next step, skill bu
 | `/grill-me` | Saved context interview | Any time you want to unpack a plan or add more context. Asks one question at a time and saves every answer to `1-context/brainstorms/`. |
 | `/next-step` | Guide | Any time. Checks your folder against the Four Cs, tells you which layer you're on, and starts the next step with you. |
 | `/make-a-skill` | Skill builder | Any task you repeat. Do it once together, then turn it into a one word command. |
+| `/add-doc` | Document intake | Drop any file (an SOP, meeting notes, a policy, a report) into `1-context/inbox/`. It explains it, files it, and adds anything automatable to your task list. |
 | `/audit` | Evidence-based check | After setup, after a meaningful fix, and weekly while building. Checks routing and freshness, scores verified reliability, and automatically saves a dated report. |
 | `/link` | Routing helper | When adding a project, file, folder, or important source. Adds the smallest useful manual/index route and checks it resolves. |
 | `/level-up` | Recurring thinking skill | Day 14, then weekly. Three Ms interview (Mindset → Method → Machine). One run = one shipped artifact. |
 | `/session-handoff` | Context saver | When a chat gets long. Writes a summary so a fresh chat picks up where you left off. |
 | `/agent-skills` | Build playbook | Anything bigger than a skill: spec, plan, build in small pieces, test, review. |
 | `/save` | Wrap up | Optional. Writes down what you did and decided. Saving itself is automatic. |
+| `/connect-company` | Company connect | Once. Connects your AI OS to your company's shared handbook and shared skills, if your company has a layer. |
+| `/share-skill` | Share with your team | When you build a skill your coworkers should have. Sends it to your company layer. |
+| `/setup-company` | Company setup (for admins) | Once per company, by whoever runs AI there. Builds the company layer from `company-kit/`. |
 | `/3d-brain` | Interactive knowledge explorer | Choose your brain's name and categories. Builds a local 3D globe from your selected files, with search, note reading, Cinema, and a branching growth replay. |
 
 **3 helpers.** Everyday work runs on Claude Sonnet. When a moment gets hard, it automatically brings in Claude Opus as an advisor. The **planner** (Opus) maps the work, the **builder** (Sonnet) builds one piece at a time, and the **checker** (Opus) proves the result before anyone relies on it.
@@ -126,6 +130,24 @@ The kit includes setup, ongoing context interviews, a guided next step, skill bu
 **`/grill-me "help me explain how my job works"`** turns what is in your head into saved context. Each answer is checkpointed immediately in a dated Markdown file under `1-context/brainstorms/`, so you can pause and resume. When you ask to build or update AI OS context, confirmed facts are added to the appropriate context pages. Tentative ideas stay labeled. Use `/onboard` for initial setup, then `/grill-me` as your work and thinking evolve.
 
 **`/level-up`** carries the audit evidence into one improvement. A verified repair to an existing workflow counts; another new skill is not always needed. Run `/audit` again after the fix. Repeated-use and scheduled-run credit comes from real execution over time.
+
+---
+
+## For companies: one shared layer for everyone
+
+Every person gets their own private AI OS. A company can add **one shared layer** on top that everyone connects to:
+
+- **The company handbook:** what the company does, who's who, the words and acronyms, the systems, and the rules for using AI. Written once. Everyone's AI OS reads it, so nobody explains the company from scratch.
+- **Shared skills:** when someone builds a skill the team should have, `/share-skill` sends it to the company layer and every connected person gets it automatically.
+
+```
+This public repo (generic, no company data)
+   ├── each person copies the AI OS ─────→ their own PRIVATE AI OS
+   │                                              │ /connect-company
+   └── one admin runs /setup-company ───→ the company's PRIVATE layer
+```
+
+Each company's layer lives in its own private GitHub, so companies never see each other's, and each person's own notes stay private. It's optional: the AI OS works fine on its own. Setup details in `company-kit/README.md`.
 
 ---
 
@@ -170,6 +192,10 @@ AI-Operating-System-RizeTech/
 │   ├── my-team.md                   ← Who does what and when you go to them
 │   ├── priorities/                  ← One file per quarter: 2026-q4, 2027-q1, q2, q3, q4
 │   ├── processes/                   ← How each process works today (template included)
+│   ├── sops/                        ← Your SOPs in plain English (originals kept)
+│   ├── meetings/                    ← Meeting summaries: decisions and action items
+│   ├── documents/                   ← Org charts, policies, reports, each with a summary
+│   ├── inbox/                       ← Drop any file here, then type /add-doc
 │   ├── voice.md                     ← How you write, so drafts sound like you
 │   ├── intake.md                    ← Your /onboard answers. Edit + re-run any time
 │   ├── decisions.md                 ← Append-only record of what was decided and why
@@ -188,6 +214,8 @@ AI-Operating-System-RizeTech/
 │   ├── rhythm.md                    ← Your daily, weekly, monthly, and quarterly habits
 │   ├── schedules.md                 ← Everything scheduled, and when
 │   └── audits/                      ← Created on first /audit; dated report cards
+│
+├── company-kit/                     ← Empty template for your company's shared layer (admins only)
 │
 ├── guides/
 │   ├── SETUP-GUIDE.md               ← Step by step through the Four Cs
@@ -212,10 +240,11 @@ AI-Operating-System-RizeTech/
 | Folder or file | What it is |
 |---|---|
 | `CLAUDE.md` | The brain. The first thing Claude reads every time: who you are, how you work, what it can do. |
-| `1-context/` | Everything about you, already organized: you, your job, your company, your team, your priorities by quarter, how your processes work, how you write, every decision, and every `/grill-me` interview. Each file comes with headings so you can see what goes where. |
+| `1-context/` | Everything about you, already organized: you, your job, your company, your team, your priorities by quarter, how your processes work, your SOPs, meetings, and documents, how you write, every decision, and every `/grill-me` interview. Each file comes with headings so you can see what goes where. |
 | `2-connections/` | The tools and software your AI OS can reach, plus a short guide for each one it's connected to (a template shows what goes in one). |
 | `3-capabilities/` | Your list of tasks to automate (with how far along each one is), step by step instructions for jobs you repeat, and small scripts that do one job each. Your skills live in `.claude/skills/`. |
 | `4-cadence/` | Your rhythm (what to do daily, weekly, monthly, quarterly), everything that runs on a schedule, and your `/audit` report cards. |
+| `company-kit/` | The empty starting point for a company's shared layer. Only whoever sets up AI for the company uses it, through `/setup-company`. |
 | `guides/` | The setup walkthrough, the Three Ms, and ideas for what to add as you grow. |
 | `archives/` | Old files. Nothing ever gets deleted, it moves here. |
 | `.env.example` | The names of any passwords or keys you'll need. The real ones go in a private `.env` file on your computer. |
