@@ -57,10 +57,10 @@ Go to **code.visualstudio.com** and click **Download**.
 ## Part 4: Install Claude Code
 
 1. Open **VS Code**. Click **Terminal** in the menu at the very top of your screen, then **New Terminal**. A terminal opens at the bottom of VS Code.
-2. Paste the install line for your computer and press Enter. Wait until it says it's done.
+2. Paste the install line for your computer and press Enter. Wait until it says **Installation complete!**
    - **Mac:** `curl -fsSL https://claude.ai/install.sh | bash`
    - **Windows:** `irm https://claude.ai/install.ps1 | iex`
-3. Paste the line that lets your computer find Claude and press Enter. Don't skip this one.
+3. Then paste this second line and press Enter. It prints nothing, that's normal. Don't skip it.
    - **Mac:** `echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc`
    - **Windows:** `[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH','User') + ";$env:USERPROFILE\.local\bin", 'User')`
 4. Open a fresh terminal so it picks up the change:
