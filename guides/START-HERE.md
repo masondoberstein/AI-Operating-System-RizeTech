@@ -63,10 +63,12 @@ Go to **code.visualstudio.com** and click **Download**.
 3. Paste the line that lets your computer find Claude and press Enter. Don't skip this one.
    - **Mac:** `echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc`
    - **Windows:** `[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH','User') + ";$env:USERPROFILE\.local\bin", 'User')`
-4. **Quit VS Code completely** (Cmd+Q on Mac, close every window on Windows) and open it again.
-5. In VS Code, click **Terminal**, then **New Terminal**. Type `claude --version` and press Enter. A version number means it worked.
+4. Open a fresh terminal so it picks up the change:
+   - **Mac:** click the **+** at the top right of the terminal.
+   - **Windows:** quit VS Code completely (close every VS Code window), open it again, then click **Terminal**, then **New Terminal**.
+5. Type `claude --version` and press Enter. A version number means it worked.
 
-**"Not recognized" or "command not found":** do steps 3 and 4 again. **"Access denied", blocked, or a virus warning:** your company's security is blocking it. Send IT the exact message, and use the Claude panel instead (see "Terminal blocked?" at the end).
+**"Not recognized" or "command not found":** do steps 3 and 4 again. On a Mac, if it still fails, quit VS Code with Cmd+Q and reopen it. **"Access denied", blocked, or a virus warning:** your company's security is blocking it. Send IT the exact message, and use the Claude panel instead (see "Terminal blocked?" at the end).
 
 ---
 
