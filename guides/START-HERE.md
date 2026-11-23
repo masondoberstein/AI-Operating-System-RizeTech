@@ -56,11 +56,17 @@ Go to **code.visualstudio.com** and click **Download**.
 
 ## Part 4: Install Claude Code
 
-1. Open **VS Code**. In the column of icons on the far left, click the **four small squares** (Extensions).
-2. Search **Claude Code**, pick the one by **Anthropic**, and click **Install**. If it asks whether you trust the publisher, click **Trust Publisher & Install**.
-3. A **Claude** spark appears in the left column, under the four squares. Click it, click **Sign in**, and pick **Claude.ai subscription**.
-4. Your web browser opens to Claude. Make sure it's signed in with your **work email** (if it shows a personal account, log out and back in). Click **Authorize**.
-5. If the browser asks to open Visual Studio Code, click **Open**. If it shows a code instead, copy it and paste it into VS Code.
+1. Open **VS Code**. Click **Terminal** in the menu at the very top of your screen, then **New Terminal**. A terminal opens at the bottom of VS Code.
+2. Paste the install line for your computer and press Enter. Wait until it says it's done.
+   - **Mac:** `curl -fsSL https://claude.ai/install.sh | bash`
+   - **Windows:** `irm https://claude.ai/install.ps1 | iex`
+3. Paste the line that lets your computer find Claude and press Enter. Don't skip this one.
+   - **Mac:** `echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc`
+   - **Windows:** `[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH','User') + ";$env:USERPROFILE\.local\bin", 'User')`
+4. **Quit VS Code completely** (Cmd+Q on Mac, close every window on Windows) and open it again.
+5. Open **Terminal**, then **New Terminal**, type `claude --version`, and press Enter. A version number means it worked.
+
+**"Not recognized" or "command not found":** do steps 3 and 4 again. **"Access denied", blocked, or a virus warning:** your company's security is blocking it. Send IT the exact message, and use the Claude panel instead (see "Terminal blocked?" at the end).
 
 ---
 
@@ -89,9 +95,12 @@ Go to **code.visualstudio.com** and click **Download**.
 2. Paste the link, press Enter, and pick **Documents** as the place to save it.
 3. If asked to sign in to GitHub, click **Allow**, then **Authorize** in the browser.
 4. Click **Open**, then **Yes, I trust the authors**.
-5. Click the **Claude** spark in the left column. Type to Claude in the box at the bottom. You're in.
+5. Click **Terminal**, then **New Terminal**. Type `claude` and press Enter.
+6. The first time, Claude asks if you trust this folder. Press Enter for **Yes**.
+7. Your browser opens to sign in. Make sure it's signed in with your **work email** (if it shows a personal account, log out and back in), then click **Authorize**. If it shows a code instead, copy it and paste it into the terminal.
+8. Type to Claude right there in the terminal. You're in.
 
-**No Claude spark, or a blue "Restricted Mode" bar?** Press **Ctrl+Shift+P** (Windows) or **Cmd+Shift+P** (Mac), type **Manage Workspace Trust**, press Enter, and click **Trust**. Then press Ctrl/Cmd+Shift+P again, type **Reload Window**, and press Enter.
+**A blue "Restricted Mode" bar?** Press **Ctrl+Shift+P** (Windows) or **Cmd+Shift+P** (Mac), type **Manage Workspace Trust**, press Enter, and click **Trust**. Then press Ctrl/Cmd+Shift+P again, type **Reload Window**, and press Enter.
 
 **A "Chat" panel on the right?** That's VS Code's own AI, not Claude. Close it.
 
@@ -101,7 +110,7 @@ Go to **code.visualstudio.com** and click **Download**.
 
 Install the **Claude** app on your phone and sign in with the same account. Then set up both ways:
 
-**Way 1: Remote Control (your phone drives your computer).** In the Claude panel, type `/`, go to **Settings**, and turn on **Enable Remote Control for all sessions**. Every chat on your computer now shows up in the app under **Code** with a laptop icon. Your computer has to be on.
+**Way 1: Remote Control (your phone drives your computer).** In Claude, type `/config` and press Enter, find **Enable Remote Control for all sessions**, and turn it on. Every chat on your computer now shows up in the app under **Code** with a laptop icon. Your computer has to be on.
 
 **Way 2: Cloud (no computer needed).** In the app, tap **Code**, connect **GitHub**, and start a session on your AI OS copy. When it's done, check the change landed on main. If not, tell Claude "merge this into main". Your computer pulls it in next time you open VS Code. Cloud sessions can't use keys saved on your computer.
 
@@ -122,25 +131,16 @@ If your company set one up, whoever runs AI there gives you access. Then type `/
 
 ---
 
-## Optional: Claude in the terminal
+## Terminal blocked? Use the Claude panel instead
 
-Same Claude, same folder, just a terminal instead of the panel.
+Same Claude, same folder, in a side panel. Nothing to install outside VS Code, so company security rarely blocks it.
 
-**Easiest (nothing to install):** press **Ctrl+,** or **Cmd+,**, search **Claude Code use terminal**, and check the box.
+1. In VS Code's left column, click the **four small squares** (Extensions).
+2. Search **Claude Code**, pick the one by **Anthropic**, and click **Install**. If it asks whether you trust the publisher, click **Trust Publisher & Install**.
+3. Click the **Claude** spark that appears under the four squares. Click **Sign in**, pick **Claude.ai subscription**, check your browser is on your work email, and click **Authorize**.
+4. Type to Claude in the box at the bottom of the panel.
 
-**Full terminal:**
-
-1. In VS Code, click **Terminal** at the top of the screen, then **New Terminal**.
-2. Paste the install line and press Enter.
-   - Mac: `curl -fsSL https://claude.ai/install.sh | bash`
-   - Windows: `irm https://claude.ai/install.ps1 | iex`
-3. Paste the line that lets your computer find Claude and press Enter.
-   - Mac: `echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc`
-   - Windows: `[Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH','User') + ";$env:USERPROFILE\.local\bin", 'User')`
-4. Quit VS Code completely (Cmd+Q on Mac, close every window on Windows) and reopen it.
-5. Open a new terminal and type `claude`. Sign in with **Authorize** the first time. For Remote Control, type `/config` and turn it on there.
-
-**"Not recognized" or "command not found":** do steps 3 and 4 again. **"Access denied" or blocked:** send IT the exact message and use the easiest option meanwhile.
+No Claude spark? Do the **Restricted Mode** fix in Part 5. For Remote Control in the panel, type `/`, go to **Settings**, and turn on **Enable Remote Control for all sessions**.
 
 ---
 
@@ -150,5 +150,5 @@ Approve these once and every new person just follows this guide:
 
 - **GitHub:** a seat for each person. Let members create **Private** repos only (organization **Settings**, **Member privileges**, **Repository creation**). Install the **Claude GitHub app** on the organization so cloud sessions work. Organization owners can see every private repo, so tell people who that is.
 - **Claude:** which plan people use and who pays. On Team or Enterprise, turn on **Claude Code**, **Remote Control**, and **cloud sessions** in the admin settings.
-- **Laptops:** allow VS Code, Git, and the Claude Code extension, or push them to laptops yourself so employees can skip Parts 2 to 4. For the terminal, allow downloads from `claude.ai` and the program at `%USERPROFILE%\.local\bin\claude.exe` (Windows) or `~/.local/bin/claude` (Mac). No admin rights needed.
+- **Laptops:** allow VS Code and Git, or push them to laptops yourself so employees can skip Parts 2 and 3. Claude Code runs in the terminal: allow downloads from `claude.ai` and the program at `%USERPROFILE%\.local\bin\claude.exe` (Windows) or `~/.local/bin/claude` (Mac). No admin rights needed.
 - **Connections:** which company systems (email, calendar, files, chat) people may connect, and who approves each.
