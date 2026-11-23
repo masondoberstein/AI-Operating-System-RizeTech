@@ -99,7 +99,11 @@ Claude is installed. Don't start it yet: you'll type `claude` in Part 5, once yo
 
    ![Source Control, then Clone Repository](images/vscode-clone.png)
 
-2. Paste **your copy's link** (the one you copied in step 4 above) in the box at the top and press Enter. A window asks where to save it. Leave it on your home folder (the one with your name) and click **Select as Repository Destination**. Don't pick Documents, Desktop, iCloud, or OneDrive: synced folders can break it.
+2. Paste **your copy's link** (the one you copied in step 4 above) in the box at the top and press Enter. A window asks where to save it. Save it in your home folder:
+   - **Mac:** click the **house** icon in the list on the left, then **Select as Repository Destination**.
+   - **Windows:** click the address bar at the top of the window, type `%USERPROFILE%`, press Enter, then click **Select as Repository Destination**.
+
+   Don't save it in Documents, Desktop, iCloud, or OneDrive. Those folders sync to the cloud and can break it.
 
    ![Paste the link and press Enter](images/vscode-paste-link.png)
 
