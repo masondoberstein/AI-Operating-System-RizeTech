@@ -108,7 +108,7 @@ Claude is installed. Don't start it yet: you'll type `claude` in Part 5, once yo
    ![Paste the link and press Enter](images/vscode-paste-link.png)
 
 3. Because your copy is private, GitHub asks you to sign in. Click **Allow** (or **Sign in with your browser** on Windows), then **Authorize** in the browser.
-4. When the copy finishes downloading, click **Open**, then **Yes, I trust the authors**.
+4. When it asks "Would you like to open the repository?", click the blue **Open** button with your mouse (don't press Enter, that picks Cancel). Then click **Yes, I trust the authors**.
 
    ![Yes, I trust the authors](images/vscode-trust.png)
 
