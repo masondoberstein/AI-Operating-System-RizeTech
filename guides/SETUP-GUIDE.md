@@ -43,7 +43,7 @@ You can always come back and add more. More context and more connections only ma
 
 **Step 1. Get your folder.** Follow "Get your folder" in `README.md`: make your copy, open it in VS Code, sign in to Claude.
 
-**Step 2. Type /onboard.** Seven quick questions: who you are, your role, who depends on your work, your priorities for the next 90 days, what you're measured on, where you talk to people, where your files live, and the task that eats your week. Talking works fine. About 15 minutes. It sets up your `context/` folder and fills in `CLAUDE.md`, the brain it reads first every time.
+**Step 2. Type /onboard.** Seven quick questions: who you are, your role, who depends on your work, your priorities for the next 90 days, what you're measured on, where you talk to people, where your files live, and the task that eats your week. Talking works fine. About 15 minutes. It sets up your `1-context/` folder and fills in `CLAUDE.md`, the brain it reads first every time.
 
 **Step 3. Type /grill-me.** This is where it really learns. Claude interviews you one question at a time and saves every answer as you go. Do one topic per session:
 - **Your role:** what you actually do each day and week, start to finish.
@@ -59,7 +59,7 @@ You can always come back and add more. More context and more connections only ma
 
 **Why it matters.** Knowing everything about you doesn't help much if it can't touch the tools you work in. These connections plug your agent into the back end of the software you use every day, so you can say "respond to this email" or "update the sheet" and have it actually happen. Everyone's list is different. There's no set number and no standard list: it's whatever *you* use.
 
-**Step 4. Name your main software.** Ask Claude: **"what tools should we connect?"** It asks what software you use most in a normal week, and based on your role it suggests what people in jobs like yours usually connect. You decide what goes on the list. `connections.md` keeps track of it.
+**Step 4. Name your main software.** Ask Claude: **"what tools should we connect?"** It asks what software you use most in a normal week, and based on your role it suggests what people in jobs like yours usually connect. You decide what goes on the list. `2-connections/connections.md` keeps track of it.
 
 **Step 5. Connect them, one at a time.** Start with the one you use most. Ask Claude: **"help me connect [tool]."** It picks the right way:
 - **A built in Claude connector** (for example Microsoft 365, Google Drive, Gmail, calendar), turned on in your Claude settings.
@@ -68,7 +68,7 @@ You can always come back and add more. More context and more connections only ma
 
 At work, check with your IT team before connecting any company system.
 
-After each connection, Claude updates `connections.md` and saves a short guide in `references/` so it never has to figure that tool out twice. Use **/link** to point it at any important folder, project, or document.
+After each connection, Claude updates `2-connections/connections.md` and saves a short guide in `2-connections/` so it never has to figure that tool out twice. Use **/link** to point it at any important folder, project, or document.
 
 **You're done with Connections when** your main tools are connected and you can ask a real question that needs each one ("what's on my calendar Thursday?", "what did the customer say in yesterday's email?") and get a real answer. You can add more any time.
 

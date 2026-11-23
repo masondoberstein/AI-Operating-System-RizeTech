@@ -218,7 +218,7 @@ Three principles that sit above everything else. When in doubt, return to these.
 
 ## Branch Frameworks (future hooks)
 
-The 3Ms is the mothership. Specific topics go deeper in dedicated frameworks. Most aren't built into this kit yet. They'll grow into `references/` over time:
+The 3Ms is the mothership. Specific topics go deeper in dedicated frameworks. Most aren't built into this kit yet. They'll grow into `guides/` over time:
 
 - **The Data Retrieval Hierarchy** — Filters, SQL, Full Context, RAG: when to use which
 - **The Integration Ladder** — API, CLI, Browser Automation, Scraping: hierarchy of reliability
