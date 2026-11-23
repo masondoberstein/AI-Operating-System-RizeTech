@@ -1,130 +1,216 @@
-# Start here: setting up your AI OS from zero
+# Start here: your AI OS from zero
 
-Follow this from top to bottom once. By the end, your AI OS runs on your computer and your phone, saves itself to GitHub, and knows who you are. Plan on about an hour.
+This guide takes you from nothing to a working AI OS on your computer and your phone. Do the parts in order. Each step is one thing to click or type. Plan on about an hour.
 
 | Part | What you do | Time |
 |---|---|---|
 | 1 | Make your accounts | 10 min |
-| 2 | Install the apps on your computer | 15 min |
-| 3 | Make your own copy and open it | 5 min |
-| 4 | Run `/onboard` | 15 min |
-| 5 | Put it on your phone | 10 min |
-| 6 | Connect to your company's layer (only if your company has one) | 5 min |
-| 7 | What's next | ongoing |
+| 2 | Install VS Code | 5 min |
+| 3 | Install Git | 5 min |
+| 4 | Install Claude Code and sign in | 5 min |
+| 5 | Make your own copy and open it | 10 min |
+| 6 | Put it on your phone | 10 min |
+| 7 | Connect to your company's layer (only if your company has one) | 5 min |
+| 8 | Build it out | ongoing |
+
+**Using this for work?** Before you start, ask your manager or IT three things: which GitHub to make your copy in (your company's, not your personal one), which Claude account to use, and whether you're allowed to install apps on your laptop. Section "For IT and admins" at the bottom lists everything they approve once for everyone.
 
 ---
 
 ## Part 1: Make your accounts
 
-1. **GitHub.** Sign up at github.com. Use your work email if this is for work. This is where your AI OS is stored.
-2. **Claude.** Sign up at claude.ai. You need a paid plan (Pro, Max, Team, or Enterprise). If your company gave you a seat, use that login.
+### GitHub (where your AI OS is stored)
 
-On a company Team or Enterprise plan, your company's Claude admin may have to turn on Claude Code, Remote Control, and cloud sessions for you. If something in Part 5 is missing, ask them.
+1. Go to **github.com/signup**.
+2. Type your email (your work email if this is for work), make a password, pick a username.
+3. Check your email for the code GitHub sends and type it in.
+4. If your company uses GitHub, tell IT your username so they can add you.
 
----
+### Claude (the AI)
 
-## Part 2: Install the apps on your computer
+1. Go to **claude.ai** and sign up with the same email.
+2. Pick a paid plan. **Pro** is enough to start. If your company gives you a Claude seat, skip this and use the invite email they send you instead.
 
-1. **VS Code.** Download it from code.visualstudio.com and install it. This is the app your AI OS opens in.
-2. **Git.** On Windows, install Git for Windows from git-scm.com. On a Mac, open the Terminal app, type `git --version`, and accept the install if it asks. Git is what keeps your folder in sync with GitHub.
-3. **Claude Code.** Open VS Code, click the Extensions icon on the left, search **Claude Code**, and click **Install**. Then click the Claude icon and sign in with your Claude account.
-
-On a company laptop, installing apps may need IT's approval. Ask them before you start.
-
----
-
-## Part 3: Make your own copy and open it
-
-1. Go to this repo on GitHub, click **Use this template**, then **Create a new repository**. Give it a name and set it to **Private**.
-2. In VS Code, press Ctrl+Shift+P (Windows) or Cmd+Shift+P (Mac), type **Git: Clone**, and paste the link to your new copy. Sign in to GitHub if it asks.
-3. Pick where to save it, then click **Open** when VS Code asks.
-4. Open Claude Code from the Claude icon. You're in.
+![Pick the Pro plan](images/claude-pricing.png)
 
 ---
 
-## Part 4: Run `/onboard`
+## Part 2: Install VS Code (the app your AI OS opens in)
 
-Type `/onboard` in Claude Code. It asks 7 questions about you, your job, your company, and how you write. Answer honestly. When it asks for writing samples, paste real emails, don't describe them.
+1. Go to **code.visualstudio.com**.
+2. Click the big blue **Download** button. It already knows if you're on Windows or Mac.
 
-At the end it fills in your `1-context/` folder. From then on, your folder saves itself to GitHub after every reply, so nothing gets lost.
+![Click Download](images/vscode-download.png)
+
+**On Windows:** open the file you downloaded. Click **I accept the agreement**, then **Next** on every screen, then **Install**, then **Finish**.
+
+**On a Mac:** open the file you downloaded. Drag **Visual Studio Code** into your **Applications** folder. Open it from Applications. If the Mac asks "are you sure you want to open it?", click **Open**.
 
 ---
 
-## Part 5: Put it on your phone
+## Part 3: Install Git (what keeps your folder in sync with GitHub)
 
-Your AI OS lives in one place: your private copy on GitHub. Your computer has a copy of it, and your phone works on that same GitHub copy. Claude pulls the newest version when it starts and saves to GitHub after every reply, so they stay matched.
+**On Windows:**
+
+1. Go to **git-scm.com/downloads/win**.
+2. Click **Click here to download**.
+
+![Click here to download](images/git-windows.png)
+
+3. Open the file you downloaded. Click **Next** on every screen without changing anything, then **Install**, then **Finish**. The default choices are the right ones.
+
+**On a Mac:**
+
+1. Open the **Terminal** app (press Cmd+Space, type **Terminal**, press Enter).
+2. Type `git --version` and press Enter.
+3. If a box pops up asking to install developer tools, click **Install** and wait for it to finish. If it shows a version number instead, Git is already installed.
+
+---
+
+## Part 4: Install Claude Code and sign in
+
+1. Open **VS Code**.
+2. On the far left there's a column of icons. Click the one that looks like **four small squares**. That's **Extensions**.
+3. In the search box at the top, type **Claude Code**.
+4. Click the one made by **Anthropic**, then click the blue **Install** button.
+5. When it finishes, a **Claude** icon (an orange spark) shows up in VS Code. Click it. A Claude panel opens.
+6. Click **Sign in**, then pick **Claude.ai subscription**.
+7. Your web browser opens. Click **Authorize**. Go back to VS Code. You're signed in.
+
+---
+
+## Part 5: Make your own copy and open it
+
+### Make your copy on GitHub
+
+1. Go to **github.com/masondoberstein/AI-Operating-System-RizeTech**.
+2. Click the green **Use this template** button, then **Create a new repository**.
+
+![Use this template, then Create a new repository](images/use-template.png)
+
+3. Fill in the page:
+   - **(1) Owner:** pick your company if this is for work, otherwise your own name.
+   - **(2) Repository name:** something like `yourname-ai-os`.
+   - **(3) Visibility:** click it and pick **Private**. Never leave it on Public.
+   - **(4)** Click **Create repository**.
+
+![Owner, name, visibility, create](images/new-repo.png)
+
+![Pick Private](images/private.png)
+
+4. On your new copy's page, click the green **Code** button, then click the **copy** icon next to the link.
+
+![Code, then copy the link](images/code-button.png)
+
+### Open it in VS Code
+
+1. In VS Code, click the icon on the left that looks like a **branch** (three dots connected by lines). That's **Source Control**.
+2. Click **Clone Repository**.
+3. Paste the link you copied (Ctrl+V on Windows, Cmd+V on a Mac) and press Enter.
+4. A box asks where to save it. Pick **Documents**, then click **Select as Repository Destination**.
+5. A box asks to sign in to GitHub. Click **Allow**, then **Authorize** in the browser, then go back to VS Code.
+6. When it says the clone is done, click **Open**.
+7. If VS Code asks "Do you trust the authors of the files in this folder?", click **Yes, I trust the authors**.
+8. Click the **Claude** icon to open Claude Code. Your AI OS is open.
+
+---
+
+## Part 6: Put it on your phone
+
+Your AI OS lives in one place: your private copy on GitHub. Your computer has a copy, and your phone works on that same GitHub copy. Claude pulls the newest version when it starts and saves to GitHub after every reply, so everything stays matched.
 
 There are two ways to use it from your phone. Set up both.
 
 | | Way 1: Remote Control | Way 2: Cloud session |
 |---|---|---|
-| What it is | Your phone drives the session running on your computer | Your phone runs a session in Anthropic's cloud, no computer needed |
-| Computer | Must be on (it reconnects on its own after sleep or a dropped connection) | Can be off |
-| What it can reach | Everything on your computer: your files, your `.env` keys, your connected tools | Only what's in your GitHub copy. Your `.env` keys stay on your computer |
-| Use it when | You step away from your desk and want to keep the same chat going | You're away from the computer, or you only have a phone |
+| What it is | Your phone drives the chat running on your computer | Your phone runs a chat in Anthropic's cloud, no computer needed |
+| Computer | Must be on (it reconnects on its own after sleep) | Can be off |
+| What it can reach | Everything on your computer, including your connected tools and keys | Only what's in your GitHub copy |
+| Use it when | You step away from your desk | Your computer is off, or you only have a phone |
 
-**First:** install the Claude app on your phone (App Store or Google Play) and sign in with the same Claude account you use on your computer.
+### First: get the Claude app
 
-### Way 1: Remote Control (your phone drives your computer)
+1. On your phone, download the **Claude** app (App Store on iPhone, Google Play on Android).
+2. Sign in with the **same** Claude account you used on your computer.
 
-Set it up once:
+### Way 1: Remote Control (set up once)
 
-1. In Claude Code on your computer, turn on **Enable Remote Control for all sessions**. In the Claude Code side panel it's in the command menu under Settings. In the terminal, type `/config` and find it in the list.
-2. That's it. Every chat you start on your computer from now on also shows up on your phone.
+1. In VS Code, in the Claude panel, type `/` to open the command menu.
+2. Go to **Settings** and turn on **Enable Remote Control for all sessions**.
+3. That's it. From now on, every chat you start on your computer also shows up on your phone.
 
-Use it:
+**Using it:** on your phone, open the Claude app, tap **Code**, and tap the chat with the **laptop** icon. Type like normal.
 
-1. Start or keep working in a chat on your computer.
-2. On your phone, open the Claude app and go to **Code**.
-3. Tap the chat with the laptop icon. Type like normal. The work happens on your computer.
+**If a chat doesn't show up on your phone:** it was started before you turned the setting on. In that chat on your computer, type `/rc` and press Enter.
 
-If a chat doesn't show up on your phone, it was started before you turned the setting on. Type `/rc` in that chat on your computer and it will appear.
+### Way 2: Cloud session (set up once)
 
-### Way 2: Cloud session (just your phone)
+1. In the Claude app, tap **Code**.
+2. Tap to connect **GitHub**, sign in, and allow it to see your AI OS copy.
 
-Set it up once:
+**Using it:**
 
-1. On your phone, open the Claude app and go to **Code**.
-2. Connect GitHub when it asks, and allow it to see your AI OS copy. On a computer you can do the same thing at claude.ai/code.
+1. In **Code**, start a new session and pick your AI OS copy.
+2. Type what you need. A **cloud** icon means it's running in the cloud, not on your computer.
+3. When it's done, check that the change landed on your main copy. If it went to a separate branch, tell Claude "merge this into main".
+4. Next time you open VS Code, your computer pulls the change in on its own.
 
-Use it:
-
-1. In **Code**, start a new session and pick your AI OS repo.
-2. Type what you need. The session shows a cloud icon, which means it's running in the cloud, not on your computer.
-3. When it's done, check that the change landed on your main copy on GitHub. If it went to a separate branch, tell Claude "merge this into main".
-4. Next time you open the folder on your computer, Claude pulls the change in automatically.
-
-A cloud session can't use anything that needs a key in your `.env` file, like sending through a connected tool. Those keys never leave your computer. Use Way 1 for that.
-
-### Which one to pick
-
-- At your desk: just use the computer.
-- Stepped away, computer still on: **Way 1.** Same chat, same tools, nothing to sync.
-- Computer off, or phone only: **Way 2.** Then let the computer pull it in later.
+A cloud session can't use anything that needs a key saved on your computer, like sending through a connected tool. Use Way 1 for that.
 
 ---
 
-## Part 6: Connect to your company's layer (only if your company has one)
+## Part 7: Connect to your company's layer (only if your company has one)
 
-Some companies set up one shared layer everyone connects to: the company handbook and shared skills. If yours did, whoever runs AI at your company will give you access. Then type `/connect-company` and follow along. If your company doesn't have one, skip this part. Your AI OS works fine on its own.
+Some companies set up one shared layer everyone connects to: the company handbook (what the company does, who's who, the words and systems) and shared skills. If yours has one, whoever runs AI at your company gives you access. Then, in Claude Code, type `/connect-company` and follow along.
+
+No company layer? Skip this. Your AI OS works fine on its own.
 
 ---
 
-## Part 7: What's next
+## Part 8: Build it out
 
-- **Build it out.** `guides/SETUP-GUIDE.md` walks through the four layers (Context, Connections, Capabilities, Cadence), one step at a time.
-- **Lost? Type `/next-step`.** Claude checks your folder and tells you what to do next.
-- **Day 7:** run `/audit` to see what's working and what's missing.
-- **Day 14:** run `/level-up` to find the first job worth automating.
+You can do all of this from your computer or your phone.
+
+1. **Today: type `/onboard`.** It asks 7 questions about you, your job, your company, and how you write. Answer honestly. When it asks for writing samples, paste real emails, don't describe them. About 15 minutes.
+2. **This week: use it for real work.** Bring real questions. Ask it to save important decisions.
+3. **Any time you're lost: type `/next-step`.** It checks your folder and tells you exactly what to do next.
+4. **Day 7: type `/audit`.** It scores your AI OS and names the biggest gap.
+5. **Day 14: type `/level-up`.** It finds the first job worth handing off, then `/make-a-skill` builds it.
+6. **Keep going:** `guides/SETUP-GUIDE.md` walks through all four layers (Context, Connections, Capabilities, Cadence).
+
+---
+
+## Pop ups you'll see once (and what to click)
+
+| When | What it says | Click |
+|---|---|---|
+| Opening VS Code on a Mac | "Are you sure you want to open it?" | **Open** |
+| Cloning your copy | "The extension GitHub wants to sign in" | **Allow**, then **Authorize** in the browser |
+| Opening your folder | "Do you trust the authors?" | **Yes, I trust the authors** |
+| Signing into Claude Code | Browser opens to Claude | **Authorize** |
+| Claude wants to run something new | "Do you want to proceed?" | **Yes, and don't ask again** (only for things in your own folder) |
+
+Your AI OS comes set up so Claude can edit files in your folder and save to GitHub without asking every time. It still asks before anything outside your folder.
 
 ---
 
 ## You're done with setup when
 
 - [ ] You have a GitHub account and a paid Claude account
-- [ ] VS Code, Git, and Claude Code are installed and signed in
+- [ ] VS Code, Git, and Claude Code are installed, and you're signed in
 - [ ] Your private copy is open in VS Code
-- [ ] `/onboard` is finished
 - [ ] A chat from your computer shows up on your phone (Way 1)
-- [ ] You started a cloud session from your phone on your AI OS repo (Way 2)
+- [ ] You started a cloud session from your phone (Way 2)
 - [ ] Connected to your company's layer, if it has one
+- [ ] `/onboard` is finished
+
+---
+
+## For IT and admins
+
+Approve these once and every new person is just this checklist:
+
+- **GitHub:** a seat in the company GitHub for each person, every AI OS copy set to **Private**, and the **Claude GitHub app** installed on the company GitHub so cloud sessions (Way 2) work.
+- **Claude:** which plan people use (Pro, Team, or Enterprise) and who pays. On Team or Enterprise, an owner turns on **Claude Code**, **Remote Control**, and **cloud sessions** in the admin settings.
+- **Laptops:** permission to install VS Code, Git, and the Claude Code extension. IT can also push Claude Code settings to every laptop at once (managed settings) so nobody sets them by hand.
+- **Connections:** which company systems (email, calendar, files, chat) people's AI OS may connect to, and who approves each one.
