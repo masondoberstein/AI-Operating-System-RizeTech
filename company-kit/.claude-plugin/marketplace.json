@@ -1,0 +1,14 @@
+{
+  "name": "company-ai",
+  "description": "Your company's shared AI layer: the company handbook and the skills everyone shares.",
+  "owner": {
+    "name": "Your company"
+  },
+  "plugins": [
+    {
+      "name": "company",
+      "source": "./plugins/company",
+      "description": "Company handbook and shared skills"
+    }
+  ]
+}

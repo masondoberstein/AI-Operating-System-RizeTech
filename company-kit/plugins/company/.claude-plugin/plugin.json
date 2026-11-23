@@ -1,0 +1,8 @@
+{
+  "name": "company",
+  "description": "Your company's handbook and the skills everyone at the company shares.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Your company"
+  }
+}
