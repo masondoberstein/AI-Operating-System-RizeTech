@@ -151,15 +151,46 @@ A **Claude Code** tab opens with the Claude logo and a box at the bottom that sa
 
 ### Prefer a terminal? (optional)
 
-Some people like typing to Claude in a plain terminal instead of the panel. It's the same Claude and the same folder.
+Some people like typing to Claude in a terminal instead of the panel. It's the same Claude and the same folder. There are two ways.
 
-1. In VS Code, click **Terminal** in the menu at the very top of your screen, then **New Terminal**. A terminal opens at the bottom of VS Code, already inside your AI OS folder.
-2. **First time only:** paste this into that terminal and press Enter. It installs the terminal version of Claude.
-   - **Mac:** `curl -fsSL https://claude.ai/install.sh | bash`
-   - **Windows:** `irm https://claude.ai/install.ps1 | iex`
-3. Type `claude` and press Enter. The first time, your browser opens to sign in. Click **Authorize**.
+**Easiest: turn the panel into a terminal (nothing to install)**
+
+1. Press **Ctrl+,** (Windows) or **Cmd+,** (Mac) to open VS Code settings.
+2. In the search box, type **Claude Code use terminal**.
+3. Check the box. The Claude panel now looks and works like a terminal.
+
+**Full terminal (one time install)**
+
+1. Click **Terminal** in the menu at the very top of your screen, then **New Terminal**. A terminal opens at the bottom of VS Code, already inside your AI OS folder.
+2. Paste the install line for your computer and press Enter. Wait until it says it's done.
+   - **Mac:**
+     ```
+     curl -fsSL https://claude.ai/install.sh | bash
+     ```
+   - **Windows:**
+     ```
+     irm https://claude.ai/install.ps1 | iex
+     ```
+3. Paste the line that lets your computer find Claude and press Enter. Skipping this is the most common reason it doesn't work.
+   - **Mac:**
+     ```
+     echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+     ```
+   - **Windows:**
+     ```
+     [Environment]::SetEnvironmentVariable('PATH', [Environment]::GetEnvironmentVariable('PATH','User') + ";$env:USERPROFILE\.local\bin", 'User')
+     ```
+4. **Quit VS Code completely** and open it again. On Windows, close every VS Code window. On a Mac, press **Cmd+Q**. Opening a new terminal tab is not enough.
+5. Open **Terminal**, then **New Terminal** again. Type `claude --version` and press Enter. If you see a version number, it worked.
+6. Type `claude` and press Enter. The first time, your browser opens to sign in. Click **Authorize**.
 
 After the first time, it's just **Terminal**, **New Terminal**, type `claude`.
+
+**Still not working?**
+
+- **"claude is not recognized" or "command not found":** step 3 or step 4 got skipped. Do both again.
+- **"Access denied", "blocked by group policy", or a virus warning:** your company's security software is blocking it. Send IT the exact message. Meanwhile, use the easiest option above, which needs no install.
+- **The install line shows an error about a connection or certificate:** your company's network is blocking the download. Send IT the exact message.
 
 Use whichever you like. Everything in this guide works in both.
 
@@ -262,5 +293,5 @@ Approve these once and every new person is just this checklist:
 
 - **GitHub:** a seat in the company GitHub for each person. Let employees make their own private repos (organization **Settings**, then **Member privileges**, then **Repository creation**: check **Private** only). Install the **Claude GitHub app** on the company GitHub so cloud sessions (Way 2) work. Owners of the company GitHub can see every private repo, so tell employees who that is.
 - **Claude:** which plan people use (Pro, Team, or Enterprise) and who pays. On Team or Enterprise, an owner turns on **Claude Code**, **Remote Control**, and **cloud sessions** in the admin settings.
-- **Laptops:** permission to install VS Code, Git, and the Claude Code extension. IT can also push Claude Code settings to every laptop at once (managed settings) so nobody sets them by hand.
+- **Laptops:** permission to install VS Code, Git, and the Claude Code extension. If people will use Claude in the terminal, allow downloads from `claude.ai` and allow the program at `%USERPROFILE%\.local\bin\claude.exe` (Windows) or `~/.local/bin/claude` (Mac) in your security software. No admin rights are needed to install it. IT can also push Claude Code settings to every laptop at once (managed settings) so nobody sets them by hand.
 - **Connections:** which company systems (email, calendar, files, chat) people's AI OS may connect to, and who approves each one.
