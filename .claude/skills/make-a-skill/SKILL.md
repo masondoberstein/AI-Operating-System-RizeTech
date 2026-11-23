@@ -61,14 +61,14 @@ Rules for writing it:
 - **Short.** Under about 100 lines. Long examples or reference info go in a second file in the same folder (for example `.claude/skills/<name>/examples.md`) and the steps say when to read it.
 - **No passwords or keys** in the skill. If it needs one, add the key's name to `.env.example` and read the value from `.env`.
 - **Anything sent to another person** (email, Teams, a post) is shown to the user as a draft first. The skill never sends on its own unless the user explicitly says so.
-- If the job repeats on its own with no judgment needed, also note it in `workflows/` and put any script it uses in `tools/` (see "How this runs" in CLAUDE.md).
+- If the job repeats on its own with no judgment needed, also note it in `3-capabilities/workflows/` and put any script it uses in `3-capabilities/tools/` (see "How this runs" in CLAUDE.md).
 
 ## Test it right away
 
 1. Tell the user the skill is ready and how to start it (`/<name>`).
 2. Run it once on a real example in a fresh chat if possible, so it only has what the skill gives it.
 3. Fix whatever went wrong **in the skill file**, not just in the output, so it never goes wrong the same way twice.
-4. Add a line to `decisions/log.md`: today's date, the new skill, and why it exists.
+4. Add a line to `1-context/decisions.md`: today's date, the new skill, and why it exists.
 
 ## Fixing a skill that isn't working
 

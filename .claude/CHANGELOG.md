@@ -1,6 +1,13 @@
 # Changelog
 
-Which version of the AI Operating System - RizeTech this folder started from is in `VERSION`. Your copy is yours: later versions of the starter never change it.
+Which version of the AI Operating System - RizeTech this folder started from is in `.claude/VERSION`. Your copy is yours: later versions of the starter never change it.
+
+## 1.8.0 (2026-11-23)
+
+- Folders organized by the Four Cs: `1-context/`, `2-connections/`, `3-capabilities/`, `4-cadence/`, plus `guides/`. Only `CLAUDE.md`, `README.md`, and `LICENSE` stay at the top.
+- `aios-intake.md` is now `1-context/intake.md`, `decisions/log.md` is now `1-context/decisions.md`, the setup guide, Three Ms, and expansions moved to `guides/`, changelog and version moved to `.claude/`.
+- New `4-cadence/schedules.md` lists everything that runs on its own.
+- README has the folder map plus a plain English explanation of each part.
 
 ## 1.7.0 (2026-11-23)
 
@@ -10,7 +17,7 @@ Which version of the AI Operating System - RizeTech this folder started from is 
 ## 1.6.0 (2026-11-23)
 
 - README follows the AIS-OS README word for word, with our skills and setup.
-- Back to the original Three Ms (`references/3ms-framework.md`, original `/level-up`) and Four Cs (Context, Connections, Capabilities, Cadence), credited to Nate Herk.
+- Back to the original Three Ms (`guides/3ms-framework.md`, original `/level-up`) and Four Cs (Context, Connections, Capabilities, Cadence), credited to Nate Herk.
 - Restored the `/3d-brain` scripts that were missing.
 
 ## 1.5.0 (2026-11-23)
@@ -27,12 +34,12 @@ Which version of the AI Operating System - RizeTech this folder started from is 
 
 ## 1.3.0 (2026-11-23)
 
-- `SETUP-GUIDE.md` rewritten to explain the idea: your personal AI agent, why each layer matters, with real examples, then the steps.
+- `guides/SETUP-GUIDE.md` rewritten to explain the idea: your personal AI agent, why each layer matters, with real examples, then the steps.
 - Added `/next-step`: checks the folder, says which layer you're on, and starts the next step with you.
 
 ## 1.2.0 (2026-11-23)
 
-- Replaced `FIRST-WEEK.md` with `SETUP-GUIDE.md`: ten steps at your own pace, grouped into four layers. Claude reads it when asked "what's my next step?" and checks what's already done.
+- Replaced `FIRST-WEEK.md` with `guides/SETUP-GUIDE.md`: ten steps at your own pace, grouped into four layers. Claude reads it when asked "what's my next step?" and checks what's already done.
 
 ## 1.1.0 (2026-11-23)
 
@@ -47,6 +54,6 @@ Which version of the AI Operating System - RizeTech this folder started from is 
 
 - First version.
 - Skills: `/onboard`, `/grill-me`, `/save`, `/session-handoff`, `/level-up`, `/link`, `/audit`, `/agent-skills`, `/3d-brain` (optional). Claude only.
-- Intake built for employees (role, team, what you're measured on). `/grill-me` saves every answer to `brainstorms/` and puts confirmed facts straight into CLAUDE.md and `context/`. `brainstorms/` and `audits/` now sync to GitHub so they're on every computer.
-- Added: `/agent-skills` (Addy Osmani's build playbook, MIT), `/save`, `/session-handoff`, planner / builder / checker agents, Sonnet default with an Opus advisor, auto pull on start, key blocker, `.env.example`, `workflows/`, `tools/`, VERSION and this changelog.
+- Intake built for employees (role, team, what you're measured on). `/grill-me` saves every answer to `1-context/brainstorms/` and puts confirmed facts straight into CLAUDE.md and `1-context/`. `1-context/brainstorms/` and `4-cadence/audits/` now sync to GitHub so they're on every computer.
+- Added: `/agent-skills` (Addy Osmani's build playbook, MIT), `/save`, `/session-handoff`, planner / builder / checker agents, Sonnet default with an Opus advisor, auto pull on start, key blocker, `.env.example`, `3-capabilities/workflows/`, `3-capabilities/tools/`, VERSION and this changelog.
 - Pilot: first people to use it, feedback goes here before it goes wider.

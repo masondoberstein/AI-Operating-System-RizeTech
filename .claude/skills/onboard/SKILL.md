@@ -1,18 +1,18 @@
 ---
 name: onboard
-description: Use on Day 1 of a new AI OS folder, when someone says "set me up", "onboard me", "let's get started", "fill in my AIOS", or has just cloned the kit. Combined wizard: runs the 7-question intake AND scaffolds the Day-1 file set at the end. Idempotent: re-run any time after editing aios-intake.md.
+description: Use on Day 1 of a new AI OS folder, when someone says "set me up", "onboard me", "let's get started", "fill in my AIOS", or has just cloned the kit. Combined wizard: runs the 7-question intake AND scaffolds the Day-1 file set at the end. Idempotent: re-run any time after editing 1-context/intake.md.
 ---
 
 ## What this skill does
 
-Single combined wizard. Reads or writes `aios-intake.md` (the canonical intake), conducts the 7-question interview if the file isn't filled, then scaffolds the Day-1 file set inline at the end of the run. No separate `/scaffold-from-intake` skill: this is one flow.
+Single combined wizard. Reads or writes `1-context/intake.md` (the canonical intake), conducts the 7-question interview if the file isn't filled, then scaffolds the Day-1 file set inline at the end of the run. No separate `/scaffold-from-intake` skill: this is one flow.
 
 **The wow moment:** at the end, suggest the closing prompt *"Try this: ask me what you should focus on this week."* The user runs it once. That's the wow. There's no `/today` skill to save; the prompt itself plants the Mindset framework (Default Shift) for them to internalize.
 
 ## When NOT to run this
 
 - If the user has already onboarded and wants to refresh: still run, but skip questions already answered (idempotent).
-- If the user wants to add a new connection: that's not onboarding: point them at `connections.md` to edit directly, or suggest `/next-step`.
+- If the user wants to add a new connection: that's not onboarding: point them at `2-connections/connections.md` to edit directly, or suggest `/next-step`.
 
 ## Execution
 
@@ -20,11 +20,11 @@ Single combined wizard. Reads or writes `aios-intake.md` (the canonical intake),
 
 Read `CLAUDE.md` first. The paths below are starter-kit defaults; use an established project's equivalent canonical context, voice, and connection sources instead of creating parallel sources of truth. Preserve unrelated operating rules and routing. Onboarding updates selected personal context, not the entire operating manual.
 
-If `aios-intake.md` is missing, use the bundled [intake template](assets/aios-intake.md). Populate only answers explicitly supported by existing sources, with references; leave unknowns for the interview. Installing this skill does not itself run onboarding or change the user's context.
+If `1-context/intake.md` is missing, use the bundled [intake template](assets/aios-intake.md). Populate only answers explicitly supported by existing sources, with references; leave unknowns for the interview. Installing this skill does not itself run onboarding or change the user's context.
 
 ### Step 1: Read the intake
 
-Read `aios-intake.md`. Check which Q1-Q7 sections have content vs. `[Your answer here]` placeholders.
+Read `1-context/intake.md`. Check which Q1-Q7 sections have content vs. `[Your answer here]` placeholders.
 
 - **All filled** → skip Step 2, jump to Step 3 (scaffold).
 - **Some filled** → ask the user: "I see Q1, Q3, Q4 are answered. Want to fill the rest now, or scaffold from what's there?" Their call.
@@ -32,7 +32,7 @@ Read `aios-intake.md`. Check which Q1-Q7 sections have content vs. `[Your answer
 
 ### Step 2: The interview (7 questions, hard cap)
 
-Ask one at a time. Write each answer into `aios-intake.md` as you go (so the user can resume if interrupted).
+Ask one at a time. Write each answer into `1-context/intake.md` as you go (so the user can resume if interrupted).
 
 **Q1: Who are you, what's your role, and who depends on your work?**
 Name, title, team, who they report to, and who uses what they produce. One short paragraph is fine.
@@ -65,11 +65,11 @@ Domain 3 (Calendar) is auto-inferred from Q5: Gmail → Google Cal; Outlook → 
 
 Once the intake is complete, generate these files (or update if re-running). Back up originals to `archives/intake-{YYYY-MM-DD-HHMM}/` if any exist.
 
-1. **`context/about-me.md`**: from Q1 (name, title, team, manager) + Q7 (top_pain). One short paragraph each.
-2. **`context/about-my-role.md`**: from Q1 (who depends on their work) + Q4 (what they're measured on and where). One paragraph.
-3. **`context/priorities.md`**: from Q3. Numbered list, one line per priority.
-4. **`references/voice.md`**: from Q2. Paste samples verbatim with a short header explaining their use ("Match this register when drafting; don't fake voice on external content without showing me first").
-5. **`connections.md`**: one row for each tool the user actually named in Q4 to Q7, with what they use it for and `not yet connected`. No fixed categories and no tools they didn't mention. However many they use is the right number.
+1. **`1-context/about-me.md`**: from Q1 (name, title, team, manager) + Q7 (top_pain). One short paragraph each.
+2. **`1-context/about-my-role.md`**: from Q1 (who depends on their work) + Q4 (what they're measured on and where). One paragraph.
+3. **`1-context/priorities.md`**: from Q3. Numbered list, one line per priority.
+4. **`1-context/voice.md`**: from Q2. Paste samples verbatim with a short header explaining their use ("Match this register when drafting; don't fake voice on external content without showing me first").
+5. **`2-connections/connections.md`**: one row for each tool the user actually named in Q4 to Q7, with what they use it for and `not yet connected`. No fixed categories and no tools they didn't mention. However many they use is the right number.
 6. **`CLAUDE.md`**: fill the `{{...}}` placeholders with the user's name, priority, knowledge base, and connections summary. In an established manual, update only the selected context or its route; preserve other instructions.
 
 ### Step 4: The closing screen
@@ -95,16 +95,16 @@ The Default Shift question seeds the Mindset framework before `/level-up` formal
 
 1. **The 7-question cap is non-negotiable.** Don't add Q8 in conversation.
 2. **Voice paste cannot be skipped.** If the user types samples mid-chat, refuse and tell them to paste from real writing.
-3. **One-shot scaffold.** After Step 2 ends, write Step 3 files in a single batch. No multi-turn confirmation. The user iterates by editing `aios-intake.md` and re-running.
+3. **One-shot scaffold.** After Step 2 ends, write Step 3 files in a single batch. No multi-turn confirmation. The user iterates by editing `1-context/intake.md` and re-running.
 4. **Idempotent.** Re-running with an edited intake refreshes context files; backs up originals to `archives/intake-{ts}/`. Skips questions already answered unless the user wants to revise.
 5. **Closing screen is three lines.** Not a menu.
 6. **No extra skills generated.** Don't scaffold `/today`, `/draft`, `/connect`, etc. The skills that ship are listed in `CLAUDE.md`; the user authors more via `/level-up`.
-7. **Read-only on `references/3ms-framework.md`.** It already ships in the kit. Don't overwrite.
+7. **Read-only on `guides/3ms-framework.md`.** It already ships in the kit. Don't overwrite.
 8. **No `.env` writes.** Don't ask for API keys on Day 1. Connections come Day 2.
 
 ## Verification (for the implementer)
 
 - Cold-test: clone a fresh kit, run `/onboard`, fill 7 answers, scaffold runs, ask the wow prompt, response cites Q1 + Q3 + Q7 specifically. Generic = fail.
-- Idempotency: re-run `/onboard` with one Q3 priority changed. Expected: only `context/priorities.md` and `CLAUDE.md`'s priority section update; backup created in `archives/intake-{ts}/`.
+- Idempotency: re-run `/onboard` with one Q3 priority changed. Expected: only `1-context/priorities.md` and `CLAUDE.md`'s priority section update; backup created in `archives/intake-{ts}/`.
 - Voice rejection: type a sample mid-chat. Expected: skill refuses, asks for paste.
 

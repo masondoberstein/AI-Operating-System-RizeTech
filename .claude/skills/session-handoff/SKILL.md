@@ -17,7 +17,7 @@ Gather session state in this order:
 2. Reconstruct decisions and shipped work from the conversation and tool results.
 3. Capture current plan and goal state:
    - Use the in session task list already visible in the thread.
-   - Name a plan file only when a real file drove the work (a spec, a plan from plan mode, a file in `context/`).
+   - Name a plan file only when a real file drove the work (a spec, a plan from plan mode, a file in `1-context/`).
 4. Capture Claude Code execution state:
    - Record unfinished background Bash tasks and what command each is running.
    - If the planner, builder or checker agents were used, record what each one was doing and whether it finished.

@@ -9,7 +9,7 @@ Check whether this AIOS can find the right information and do useful work reliab
 
 Run locally in the current project. Do not launch subagents unless the user requests them. Audit first; `/link` repairs a route, and `/level-up` helps close one meaningful gap. Never inflate or deliberately depress a score to encourage another run. Improvement comes from better evidence and behavior.
 
-**Every audit automatically saves its report in the audited project's `audits/` folder.** Read [history.md](history.md) for prior-report selection, finding transitions, comparison rules, and safe persistence. Saving the local audit record is part of this skill, not a separate approval step. An explicit user request not to save overrides this default. The inspected system remains unchanged.
+**Every audit automatically saves its report in the audited project's `4-cadence/audits/` folder.** Read [history.md](history.md) for prior-report selection, finding transitions, comparison rules, and safe persistence. Saving the local audit record is part of this skill, not a separate approval step. An explicit user request not to save overrides this default. The inspected system remains unchanged.
 
 ## 1. Establish scope and evidence
 
@@ -93,4 +93,4 @@ Finish the section with whether any manuals were changed. In a standard read-onl
 
 Recommend rerunning `/audit` after the selected fix and weekly during active setup, then at a sensible maintenance interval. Compare with a previous saved report only when scope and rubric match; v1 scores need a new baseline. Scores can decrease when evidence becomes stale. Do not promise a higher score from another run alone.
 
-The audit is read-only toward inspected systems: no repairs, file moves, installation, scheduler changes, messages, or external writes. Its sole default write is a new local audit report under `audits/` (create the directory if needed). Preserve earlier reports, redact secrets and unnecessary private records, and do not update business memory or source-of-truth files from audit observations. On an incomplete run, save a clearly marked partial report when possible; do not present it as a completed audit or fabricate a score. If saving fails, report that explicitly and return the report in chat.
+The audit is read-only toward inspected systems: no repairs, file moves, installation, scheduler changes, messages, or external writes. Its sole default write is a new local audit report under `4-cadence/audits/` (create the directory if needed). Preserve earlier reports, redact secrets and unnecessary private records, and do not update business memory or source-of-truth files from audit observations. On an incomplete run, save a clearly marked partial report when possible; do not present it as a completed audit or fabricate a score. If saving fails, report that explicitly and return the report in chat.

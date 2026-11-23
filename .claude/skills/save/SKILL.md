@@ -13,8 +13,8 @@ Run in order. Each step ends as done, fixed, or blocked, with the reason.
 
 1. **What changed.** Run `git status -s`. List the files this session created or changed. If something changed that this session didn't touch, list it and ask before including it.
 2. **Tests.** If the session changed platform code and a test command exists, run it. If tests fail, say so plainly and ask whether to save anyway. No tests is reported as "no tests", never as a pass.
-3. **Decisions.** If anything was decided today, make sure it's in `decisions/log.md` with today's date and why. If the brain learned something new, make sure `CLAUDE.md` or the right file in `context/` has it.
-4. **Work note.** Add a few lines at the top of `context/work-log.md` (make it if missing): today's date, who worked, what got done, what's next. Newest first.
+3. **Decisions.** If anything was decided today, make sure it's in `1-context/decisions.md` with today's date and why. If the brain learned something new, make sure `CLAUDE.md` or the right file in `1-context/` has it.
+4. **Work note.** Add a few lines at the top of `1-context/work-log.md` (make it if missing): today's date, who worked, what got done, what's next. Newest first.
 5. **Check for secrets.** Make sure no `.env` file, password, or API key is about to be committed. If one is, stop and say so.
 6. **Commit.** Stage only this session's files. Commit with a plain message saying what changed, for example "Weekly report workflow, first test against last month's report".
 7. **Pull, then push.** Run `git pull --rebase`, then `git push`. If the pull hits a conflict (both people changed the same lines), stop, show both versions in plain words, and ask which to keep. Never force push.

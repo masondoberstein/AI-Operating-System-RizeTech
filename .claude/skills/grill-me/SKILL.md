@@ -9,8 +9,8 @@ Pull what the user knows out of their head and into this folder, one question at
 
 ## Before the first question
 
-1. Read `CLAUDE.md`, the files in `context/` that fit the topic, `decisions/log.md`, and any earlier capture in `brainstorms/` on the same topic.
-2. **Make the capture file now**, before asking anything: `brainstorms/{YYYY-MM-DD}-{topic}.md` (make the `brainstorms/` folder if it doesn't exist). Get today's real date from the computer. Never overwrite an earlier capture; add a time to the name if one exists for today. Start it with a title, the date, the goal, and an empty "Open questions" section.
+1. Read `CLAUDE.md`, the files in `1-context/` that fit the topic, `1-context/decisions.md`, and any earlier capture in `1-context/brainstorms/` on the same topic.
+2. **Make the capture file now**, before asking anything: `1-context/brainstorms/{YYYY-MM-DD}-{topic}.md` (make the `1-context/brainstorms/` folder if it doesn't exist). Get today's real date from the computer. Never overwrite an earlier capture; add a time to the name if one exists for today. Start it with a title, the date, the goal, and an empty "Open questions" section.
 3. Tell the user where you're saving, in one line.
 4. If no topic was given, ask what to focus on today, with a guess from what's already in the folder. For example: "Want to start with the task that eats your week?"
 
@@ -37,9 +37,9 @@ Good ground to cover for someone's work, skipping what's already known:
 The moment an answer lands, before asking the next question:
 1. **Add it to the capture file**: the question, what they said, anything still unsure, and any open question with its owner. One answer per save, never several at once. If a later answer changes an earlier one, keep the old entry and mark it replaced.
 2. **Put confirmed facts where they belong:**
-   - Facts about their work go in the matching file in `context/` (for example `context/team.md`, `context/current-process.md`). Make the file if it doesn't exist.
-   - Anything that changes how Claude should work goes in `CLAUDE.md`. Keep CLAUDE.md short and point to `context/` for detail.
-   - Anything decided goes in `decisions/log.md` with today's date and why.
+   - Facts about their work go in the matching file in `1-context/` (for example `1-context/team.md`, `1-context/current-process.md`). Make the file if it doesn't exist.
+   - Anything that changes how Claude should work goes in `CLAUDE.md`. Keep CLAUDE.md short and point to `1-context/` for detail.
+   - Anything decided goes in `1-context/decisions.md` with today's date and why.
    - Guesses and ideas stay in the capture file until the user confirms them.
 3. If saving fails, say so and keep the answer visible in chat. Never say something was saved when it wasn't.
 
