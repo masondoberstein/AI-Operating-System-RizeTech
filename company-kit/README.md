@@ -23,6 +23,14 @@ This public repo (generic, no company data)
 2. It helps you put that folder in a **private** repo in your company's GitHub (for example `your-company/company-ai`). Never make it public.
 3. It gives you a short message to send everyone: how to connect.
 
+## Give people access (once per person)
+
+Whoever manages your company's GitHub does this, on the company repo's page under **Settings → Collaborators and teams**:
+
+- **Everyone who should use it: Read.** Without this, the link won't work for them.
+- **The one or two people who approve changes: Write.**
+- Under **Settings → Branches**, turn on **Require a pull request before merging**, so nothing reaches everyone until an approver says yes.
+
 ## Connect each person
 
 Each person types **/connect-company** in their AI OS and pastes the company repo (for example `your-company/company-ai`). It adds two lines to their settings, and Claude Code installs the company layer and keeps it updated on its own. `/onboard` also asks about this at the end.
@@ -53,6 +61,13 @@ company-kit/
             ├── policies.md              ← What's okay to put into AI
             └── sops/                    ← Company wide SOPs
 ```
+
+## Adding and changing things
+
+1. Someone builds a skill in their own AI OS (or wants to fix something in the handbook) and types **/share-skill**.
+2. It sends the change to the company repo as a suggestion (a pull request).
+3. An approver gets a GitHub notification, checks it, and clicks **Merge**.
+4. Everyone connected gets it the next time they start Claude.
 
 ## Keeping it current
 
